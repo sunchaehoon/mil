@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Header from './Header/Header';
 
-const Home = (initialTitle :any) => {
+const Home = () => {
 
-    interface Title {
-        title: string | undefined,
-        setTitle: string | undefined;
+    const pgTitle = document.querySelector("title");
+    if(pgTitle instanceof Element) {
+        pgTitle.innerHTML = "MIL | Home";
     }
-    const [title, setTitle] = useState<Title | null>(null);
 
 
     return (
