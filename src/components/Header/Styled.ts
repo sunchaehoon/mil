@@ -14,22 +14,9 @@ export const HeaderInner = styled.div`
     /* display: flex; */
     position: relative;
     margin: 0 auto;
-    min-width: 800px;
+    min-width: 955px;
     max-width: 1600px;
 `;
-
-// export const MILLogo = styled.div`
-//     @font-face {
-//         font-family: 'EF_MACHO';
-//         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_MACHO.woff2') format('woff2');
-//         font-weight: normal;
-//         font-style: normal;
-//     }
-//     font-family: 'EF_MACHO';
-//     color: black;
-//     display: flex;
-//     align-items: center;
-// `;
 
 export const LogoH1 = styled.h1`
     margin: 37px 0 0 81px;
@@ -60,8 +47,6 @@ export const HeaderRightUl = styled.ul`
     list-style: none;
     display: flex;
     margin: 0;
-    /* width: 200px; */
-    /* justify-content: space-between; */
 `;
 
 export const HeaderRightLi = styled.li`
