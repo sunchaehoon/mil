@@ -18,7 +18,15 @@ const Home = () => {
                 <S.Wrap>
                     <S.SectionHome>
                         <S.sectionInner>
-                            
+                            <S.Recommendsection>
+                                <S.SectionContents>
+                                    <S.ThumbnailWiper>
+                                        <S.SwiperSlide>
+                                            
+                                        </S.SwiperSlide>
+                                    </S.ThumbnailWiper>
+                                </S.SectionContents>
+                            </S.Recommendsection>
                         </S.sectionInner>
                     </S.SectionHome>
                     

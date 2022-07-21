@@ -26,7 +26,27 @@ export const sectionInner =  styled.div`
     margin: 0 auto;
 `;
 
-export const Recommendsection = styled.div`
+export const Recommendsection = styled.section`
     display: block;
-    
+    padding-top: 0!important;
+`;
+
+export const SectionContents = styled.div`
+    margin-bottom: 27px;
+    border-radius: 6px;
+    min-height: 189px;
+    margin-top: 6px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+`;
+
+export const ThumbnailWiper = styled.ul`
+    transition-duration: 0ms;
+    transform: translate3d(-1910px, 0px, 0px);
+    margin-top: -16px;
+`;
+
+export const SwiperSlide = styled.li`
+    margin-top: 16px;
 `;
