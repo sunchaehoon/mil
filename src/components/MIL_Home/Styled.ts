@@ -45,8 +45,51 @@ export const ThumbnailWiper = styled.ul`
     transition-duration: 0ms;
     transform: translate3d(-1910px, 0px, 0px);
     margin-top: -16px;
+    margin-left: 0;
+    overflow-x: visible;
+    overflow-y: visible;
 `;
 
 export const SwiperSlide = styled.li`
     margin-top: 16px;
+    position: relative;
+    width: 955px;
+    overflow: visible;
+    margin-left: 0;
+`;
+
+export const RecommendHead = styled.div`
+    z-index: 4;
+    position: absolute;
+    width: 230px;
+    padding: 40px 0 0 40px;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 40px;
+    color: #fff;
+`;
+
+export const RecommendHeadH4 = styled.h4`
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom: 20px;
+`;
+
+export const TotalStatusData = styled.div`
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+`;
+
+export const BarNormal = styled.span`
+    padding: 0 10px;
+    font-size: 9px;
+    color: #fff;
+    opacity: .3;
 `;
