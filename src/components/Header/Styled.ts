@@ -66,7 +66,7 @@ export const HeaderSearch = styled.fieldset`
     position: relative;
     display: inline-block;
     height: 32px;
-    width: 280px;
+    width: 180px;
     border: 1px solid #d2d2d2;
     border-radius: 17px;
     vertical-align: middle;

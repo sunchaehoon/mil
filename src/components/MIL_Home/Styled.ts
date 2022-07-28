@@ -13,7 +13,6 @@ export const Wrap = styled.div`
 `;
 
 export const SectionHome = styled.div`
-    width: 955px;
     padding: 100px 80px 0 80px;
     margin: 0 auto;
     background-color: #fff;
@@ -21,8 +20,8 @@ export const SectionHome = styled.div`
 
 export const sectionInner =  styled.div`
     padding-top: 10px;
-    max-width: 1600px;
-    min-width: 800px;
+    max-width: 900px;
+    min-width: 600px;
     margin: 0 auto;
 `;
 
@@ -42,12 +41,28 @@ export const SectionContents = styled.div`
 `;
 
 export const ThumbnailWiper = styled.ul`
-    transition-duration: 0ms;
+    /* transition-duration: 0ms;
     transform: translate3d(-1910px, 0px, 0px);
     margin-top: -16px;
     margin-left: 0;
     overflow-x: visible;
-    overflow-y: visible;
+    overflow-y: visible; */
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 `;
 
 export const SwiperSlide = styled.li`
@@ -55,7 +70,7 @@ export const SwiperSlide = styled.li`
     position: relative;
     width: 955px;
     overflow: visible;
-    margin-left: 0;
+    margin: 0 auto;
 `;
 
 export const RecommendHead = styled.div`
@@ -78,6 +93,11 @@ export const RecommendHeadH4 = styled.h4`
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     margin-bottom: 20px;
+
+    font-size: 26.8px;
+    font-weight: 800;
+    line-height: 40px;
+    color: #fff;
 `;
 
 export const TotalStatusData = styled.div`
@@ -92,4 +112,21 @@ export const BarNormal = styled.span`
     font-size: 9px;
     color: #fff;
     opacity: .3;
+`;
+
+export const AlbumList = styled.div`
+    z-index: 4;
+    position: absolute;
+    top: 30px;
+    left: 324px;
+`;
+
+export const RecommendTrackHome = styled.div`
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+`;
+
+export const RecommendTrackList = styled.ul`
+    float: left;
 `;

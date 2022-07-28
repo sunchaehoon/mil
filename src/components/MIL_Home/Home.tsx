@@ -24,15 +24,21 @@ const Home = () => {
                                 <S.SectionContents>
                                     <S.ThumbnailWiper>
                                         <S.SwiperSlide>
-                                            <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디'></Link>
-                                            <S.RecommendHead>
-                                                <S.RecommendHeadH4>오늘 퇴근하고 혼수랗며 함께 할 인디</S.RecommendHeadH4>
-                                                <S.TotalStatusData>
-                                                    총 15곡
-                                                    <S.BarNormal>|</S.BarNormal>
-                                                    2022.6.20
-                                                </S.TotalStatusData>
-                                            </S.RecommendHead>
+                                            <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디'>
+                                                <S.RecommendHead>
+                                                    <S.RecommendHeadH4>오늘 퇴근하고 혼술하며 함께 할 인디</S.RecommendHeadH4>
+                                                    <S.TotalStatusData>
+                                                        총 15곡
+                                                        <S.BarNormal>|</S.BarNormal>
+                                                        2022.6.20
+                                                    </S.TotalStatusData>
+                                                </S.RecommendHead>
+                                                <S.AlbumList>
+                                                    <S.RecommendTrackHome>
+                                                        
+                                                    </S.RecommendTrackHome>
+                                                </S.AlbumList>
+                                            </Link>
                                         </S.SwiperSlide>
                                     </S.ThumbnailWiper>
                                 </S.SectionContents>
