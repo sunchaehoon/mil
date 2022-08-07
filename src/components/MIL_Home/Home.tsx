@@ -24,7 +24,7 @@ const Home = () => {
                                 <S.SectionContents>
                                     <S.ThumbnailWiper>
                                         <S.SwiperSlide>
-                                            <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디'>
+                                            <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디 상세보기'>
                                                 <S.RecommendHead>
                                                     <S.RecommendHeadH4>오늘 퇴근하고 혼술하며 함께 할 인디</S.RecommendHeadH4>
                                                     <S.TotalStatusData>
@@ -35,7 +35,17 @@ const Home = () => {
                                                 </S.RecommendHead>
                                                 <S.AlbumList>
                                                     <S.RecommendTrackHome>
-                                                        
+                                                        <S.RecommendTrackList>
+                                                            <li>
+                                                                <S.ThumbnailChart>
+                                                                    <img src='https://cdn.music-flo.com/image/album/883/297/03/04/403297883_5d89b540.jpg?1569305922166/dims/resize/140x140/quality/90' width='53' height='53' alt='임재현/조금 취했어' className='chart_thumbnail' />
+                                                                    <S.ChartTitle>조금 취했어</S.ChartTitle>
+                                                                </S.ThumbnailChart>
+                                                            </li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </S.RecommendTrackList>
                                                     </S.RecommendTrackHome>
                                                 </S.AlbumList>
                                             </Link>

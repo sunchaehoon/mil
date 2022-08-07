@@ -130,3 +130,31 @@ export const RecommendTrackHome = styled.div`
 export const RecommendTrackList = styled.ul`
     float: left;
 `;
+
+export const ThumbnailChart = styled.div`
+    display: inline-block;
+    font-size: 0;
+    color: #fff;
+    vertical-align: top;
+`;
+
+export const ChartTitle = styled.strong`
+    margin: 5px 0 0 20px;
+    width: 210px;
+    max-width: 210px;
+
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'GangwonEdu_OTFBoldA';
+
+    @font-face {
+        font-family: 'GangwonEdu_OTFBoldA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+`;
