@@ -20,7 +20,7 @@ export const SectionHome = styled.div`
 
 export const sectionInner =  styled.div`
     padding-top: 10px;
-    max-width: 900px;
+    max-width: 955px;
     min-width: 600px;
     margin: 0 auto;
 `;
@@ -76,9 +76,9 @@ export const SwiperSlide = styled.li`
 export const RecommendHead = styled.div`
     z-index: 4;
     position: absolute;
-    width: 230px;
+    width: 24%;
     padding: 40px 0 0 40px;
-    font-size: 28px;
+    font-size: 26.5px;
     font-weight: 800;
     line-height: 40px;
     color: #fff;
@@ -94,10 +94,11 @@ export const RecommendHeadH4 = styled.h4`
     -webkit-line-clamp: 3;
     margin-bottom: 20px;
 
-    font-size: 26.8px;
+    /* font-size: 26.8px; */
     font-weight: 800;
     line-height: 40px;
     color: #fff;
+    user-select: none;
 `;
 
 export const TotalStatusData = styled.div`
@@ -105,6 +106,7 @@ export const TotalStatusData = styled.div`
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
+    user-select: none;
 `;
 
 export const BarNormal = styled.span`
@@ -112,13 +114,14 @@ export const BarNormal = styled.span`
     font-size: 9px;
     color: #fff;
     opacity: .3;
+    user-select: none;
 `;
 
 export const AlbumList = styled.div`
     z-index: 4;
     position: absolute;
     top: 30px;
-    left: 324px;
+    left: 33.5%;
 `;
 
 export const RecommendTrackHome = styled.div`
@@ -129,11 +132,20 @@ export const RecommendTrackHome = styled.div`
 
 export const RecommendTrackList = styled.ul`
     float: left;
+    li {
+        display: block;
+        height: 45px;
+        width: auto !important;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px 0;
+    }
 `;
 
 export const ThumbnailChart = styled.div`
     display: inline-block;
-    font-size: 0;
+    font-size: 0px;
     color: #fff;
     vertical-align: top;
 `;
@@ -141,7 +153,6 @@ export const ThumbnailChart = styled.div`
 export const ChartTitle = styled.strong`
     margin: 5px 0 0 20px;
     width: 210px;
-    max-width: 210px;
 
     display: inline-block;
     overflow: hidden;
@@ -157,4 +168,12 @@ export const ChartTitle = styled.strong`
         font-weight: normal;
         font-style: normal;
     }
+`;
+
+export const ChartArtist = styled.span`
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #fff;
+    opacity: .6;
 `;
