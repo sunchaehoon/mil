@@ -71,6 +71,14 @@ export const SwiperSlide = styled.li`
     width: 955px;
     overflow: visible;
     margin: 0 auto;
+    font-size: 26.5px;
+
+    @media screen and (max-width: 900px) {
+        font-size: 25px;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 23.5px;
+    }
 `;
 
 export const RecommendHead = styled.div`
@@ -78,7 +86,7 @@ export const RecommendHead = styled.div`
     position: absolute;
     width: 24%;
     padding: 40px 0 0 40px;
-    font-size: 26.5px;
+    font-size: 1em;
     font-weight: 800;
     line-height: 40px;
     color: #fff;
@@ -152,7 +160,8 @@ export const ThumbnailChart = styled.div`
 
 export const ChartTitle = styled.strong`
     margin: 5px 0 0 20px;
-    width: 210px;
+    max-width: 210px;
+    width: 210px;  
 
     display: inline-block;
     overflow: hidden;
@@ -168,6 +177,10 @@ export const ChartTitle = styled.strong`
         font-weight: normal;
         font-style: normal;
     }
+    @media screen and (max-width: 1050px) {
+        font-size: 12px;
+        width: 190px;
+    }
 `;
 
 export const ChartArtist = styled.span`
@@ -176,4 +189,7 @@ export const ChartArtist = styled.span`
     font-size: 12px;
     color: #fff;
     opacity: .6;
+    @media screen and (max-width: 1050px) {
+        font-size: 9px;
+    }
 `;

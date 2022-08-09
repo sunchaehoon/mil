@@ -37,6 +37,14 @@ li, ol, ul {
     vertical-align: top;
 }
 
+@media screen and (max-width: 1050px) {
+    .chart_thumbnail {
+        width: 35px;
+        height: 35px;
+        border-radius: 3px;
+    }
+}
+
 .recommend_track_list {
     margin-left: 30px;
 }
