@@ -3,44 +3,99 @@ import Header from '../Header/Header';
 import * as S from './Styled';
 import {Link} from 'react-router-dom';
 import "./style.css";
+import axios from "axios";
+
+
+// export const getPosts = async () => {
+//     const BaladChat = await axios.get('http://localhost:4000/posts');
+//     return BaladChat.data;
+// };
+
 
 const Home = () => {
 
     const pgTitle = document.querySelector("title");
-    if(pgTitle instanceof Element) {
+    if (pgTitle instanceof Element) {
         pgTitle.innerHTML = "MIL | Home";
-    }
+    }       
 
+    useEffect(() => {
+        axios.get('http://localhost:4000/posts')
+            .then(chart => {
+                return(
+                    <li>
+                        <S.ThumbnailChart>
+                            <img src={chart.data[0].url} alt={`${chart.data[0].artist} / ${chart.data[0].url}`} className='chart_thumbnail' />
+                            <S.ChartTitle>
+                                {chart.data[0].title}
+                                <S.ChartArtist>{chart.data[0].artist}</S.ChartArtist>
+                            </S.ChartTitle>
+                        </S.ThumbnailChart>
+                    </li>
+                );
+            }
+        )
+    })
+    // const getChart = () => {
+    //     axios.get('http://localhost:4000/posts')
+    //     .then((chart) => {
+    //         chart.data.map(function(a: number, i: number): any {
+    //             return (
+    //                 <li>
+    //                     <S.ThumbnailChart>
+    //                         <img src={chart.data[i].url} alt={`${chart.data[i].artist} / ${chart.data[i].url}`} className='chart_thumbnail' />
+    //                         <S.ChartTitle>
+    //                             {chart.data[i].title}
+    //                             <S.ChartArtist>{chart.data[i].artist}</S.ChartArtist>
+    //                         </S.ChartTitle>
+    //                     </S.ThumbnailChart>
+    //                 </li>
+    //             );
+    //         })
+    //     })
+    // }
+
+    // map
+    // 1.array 자료 갯수만큼 함수안의 코드 실행
+    // 2.함수의 파라미터 a는 array안에 있던 자료
+    // 3.return에 뭘 적으면 array로 담아줌 
+
+
+
+    //let [baladChart, chgBaladChart] = useState(['', '', '', '']);
+
+
+    
 
     return (
         <>
             <S.App>
                 <Header />
 
-                <S.Wrap>
-                    <S.SectionHome>
-                        <S.sectionInner>
-                            <S.Recommendsection>
-                                <S.SectionContents>
-                                    <S.ThumbnailWiper>
-                                        <S.SwiperSlide>
-                                            <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디 상세보기'>
-                                                <S.RecommendHead>
-                                                    <S.RecommendHeadH4>오늘 퇴근하고 혼술하며 함께 할 인디</S.RecommendHeadH4>
-                                                    <S.TotalStatusData>
-                                                        총 15곡
-                                                        <S.BarNormal>|</S.BarNormal>
-                                                        2022.6.20
-                                                    </S.TotalStatusData>
-                                                </S.RecommendHead>
-                                                <S.AlbumList>
-                                                    <S.RecommendTrackHome>
-                                                        <S.RecommendTrackList>
+                    <S.Wrap>
+                        <S.SectionHome>
+                            <S.sectionInner>
+                                <S.Recommendsection>
+                                    <S.SectionContents>
+                                        <S.ThumbnailWiper>
+                                            <S.SwiperSlide>
+                                                <Link className='MIL-recommend' to="/detail/ballad" title='오늘 퇴근하고 혼술하며 함께 할 인디 상세보기'>
+                                                    <S.RecommendHead>
+                                                        <S.RecommendHeadH4>오늘 퇴근하고 혼술하며 함께 할 인디</S.RecommendHeadH4>
+                                                        <S.TotalStatusData>
+                                                            총 15곡
+                                                            <S.BarNormal>|</S.BarNormal>
+                                                            2022.6.20
+                                                        </S.TotalStatusData>
+                                                    </S.RecommendHead>
+                                                    <S.AlbumList>
+                                                        <S.RecommendTrackHome>
+                                                            <S.RecommendTrackList>
                                                             <li>
                                                                 <S.ThumbnailChart>
-                                                                    <img src='https://cdn.music-flo.com/image/album/883/297/03/04/403297883_5d89b540.jpg?1569305922166/dims/resize/140x140/quality/90' alt='임재현/조금 취했어' className='chart_thumbnail' />
+                                                                    <img src="https://cdn.music-flo.com/image/album/883/297/03/04/403297883_5d89b540.jpg?1569305922166/dims/resize/140x140/quality/90" alt='임재현/조금 취했어' className='chart_thumbnail' />
                                                                     <S.ChartTitle>
-                                                                        조금 취했어
+                                                                        {}
                                                                         <S.ChartArtist>임재현</S.ChartArtist>
                                                                     </S.ChartTitle>
                                                                 </S.ThumbnailChart>
@@ -72,6 +127,24 @@ const Home = () => {
                                                                     </S.ChartTitle>
                                                                 </S.ThumbnailChart>
                                                             </li>
+                                                            {/* {
+                                                                baladChart.map(function(a: string | number, i: number): any {
+                                                                    return (
+                                                                        <li>
+                                                                            <S.ThumbnailChart>
+                                                                                <img src={baladChart[i].url} alt={`${chart.data[i].artist} / ${chart.data[i].url}`} className='chart_thumbnail' />
+                                                                                <S.ChartTitle>
+                                                                                    {chart.data[i].title}
+                                                                                    <S.ChartArtist>{chart.data[i].artist}</S.ChartArtist>
+                                                                                </S.ChartTitle>
+                                                                            </S.ThumbnailChart>
+                                                                        </li>
+                                                                    );
+                                                                })
+                                                            } */}
+                                                            
+
+
                                                         </S.RecommendTrackList>
 
                                                         <S.RecommendTrackList className='recommend_track_list'>
@@ -126,6 +199,6 @@ const Home = () => {
             </S.App>
         </>
     );
-};
+}
 
 export default Home;
