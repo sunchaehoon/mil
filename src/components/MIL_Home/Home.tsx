@@ -11,29 +11,19 @@ import axios from 'axios';
 // };
 
 const Home = () => {
+   const [data, setData]: any = useState( [] );
+
+
    const pgTitle = document.querySelector('title');
    if (pgTitle instanceof Element) {
       pgTitle.innerHTML = 'MIL | Home';
    }
 
    useEffect(() => {
-      axios.get('http://localhost:4000/posts').then((chart) => {
-         return (
-            <li>
-               <S.ThumbnailChart>
-                  <img
-                     src={chart.data[0].url}
-                     alt={`${chart.data[0].artist} / ${chart.data[0].url}`}
-                     className="chart_thumbnail"
-                  />
-                  <S.ChartTitle>
-                     {chart.data[0].title}
-                     <S.ChartArtist>{chart.data[0].artist}</S.ChartArtist>
-                  </S.ChartTitle>
-               </S.ThumbnailChart>
-            </li>
-         );
-      });
+      axios.get('http://localhost:4000/BaladChart').then((response) => {
+         setData(response.data);
+      })
+      .catch(() => {console.log("something wrong.")});
    }, []);
    // const getChart = () => {
    //     axios.get('http://localhost:4000/posts')
@@ -94,14 +84,14 @@ const Home = () => {
                                              <li>
                                                 <S.ThumbnailChart>
                                                    <img
-                                                      src="https://cdn.music-flo.com/image/album/883/297/03/04/403297883_5d89b540.jpg?1569305922166/dims/resize/140x140/quality/90"
-                                                      alt="임재현/조금 취했어"
+                                                      src={data[0].url}
+                                                      alt={`${data[0].artist} / ${data[0].title}`}
                                                       className="chart_thumbnail"
                                                    />
                                                    <S.ChartTitle>
-                                                      조금 취했어
+                                                      {data[0].title}
                                                       <S.ChartArtist>
-                                                         임재현
+                                                         {data[0].artist}
                                                       </S.ChartArtist>
                                                    </S.ChartTitle>
                                                 </S.ThumbnailChart>
