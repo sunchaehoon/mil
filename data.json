@@ -1,56 +1,56 @@
 {
     "BaladChart": [
         {
-            "id": 1,
+            "rank": 1,
             "title": "조금 취했어",
             "artist": "임재현",
             "release": 2019,
             "url": "https://cdn.music-flo.com/image/album/883/297/03/04/403297883_5d89b540.jpg?1569305922166/dims/resize/140x140/quality/90"
         },
         {
-            "id": 2,
+            "rank": 2,
             "title": "취중고백",
             "artist": "김민석(멜로망스)",
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/662/145/07/04/407145662_61bc226d_s.jpg?1639719534775/dims/resize/140x140/quality/90"
         },
         {
-            "id": 3,
+            "rank": 3,
             "title": "나의 X에게",
             "artist": "경서",
             "release": 2022,
             "url": "https://cdn.music-flo.com/image/v2/album/854/089/08/04/408089854_626246eb_s.jpg?1650607853236/dims/resize/140x140/quality/90"
         },
         {
-            "id": 4,
+            "rank": 4,
             "title": "그때 그 순간 그대로 (그그그)",
             "artist": "WSG워너비 (가야G)",
             "release": 2022,
             "url": "https://cdn.music-flo.com/image/v2/album/080/747/08/04/408747080_62c7dce2_s.jpg?1657265380357/dims/resize/140x140/quality/90"
         },
         {
-            "id": 5,
+            "rank": 5,
             "title": "바라만 본다",
             "artist": "MSG워너비(M.O.M)",
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/332/330/06/04/406330332_60d58c16_s.jpg?1624607767591/dims/resize/140x140/quality/90"
         },
         {
-            "id": 6,
+            "rank": 6,
             "title": "눈이 오잖아(Feat.헤이즈)",
             "artist": "이무진",
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/908/069/07/04/407069908_61a88ae5_s.jpg?1638435559398/dims/resize/140x140/quality/90"
         },
         {
-            "id": 7,
+            "rank": 7,
             "title": "찰나가 영원이 될 때 (The Eternal Moment)",
             "artist": "마크툽 (MAKTUB)",
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/479/552/06/04/406552479_6141a960_s.jpg?1631693154773/dims/resize/140x140/quality/90"
         },
         {
-            "id": 8,
+            "rank": 8,
             "title": "비가 오는 날엔(2021)",
             "artist": "헤이즈 (Heize)",
             "release": 2021,
