@@ -29,13 +29,6 @@ export const SectionContents = styled.div`
 `;
 
 export const ThumbnailWiper = styled.ul`
-    /* transition-duration: 0ms;
-    transform: translate3d(-1910px, 0px, 0px);
-    margin-top: -16px;
-    margin-left: 0;
-    overflow-x: visible;
-    overflow-y: visible; */
-
     position: relative;
     width: 100%;
     height: 100%;
@@ -58,7 +51,7 @@ export const SwiperSlide = styled.li`
     position: relative;
     width: 955px;
     overflow: visible;
-    margin: 0 auto;
+    margin-left: 0;
     font-size: 26.5px;
 
     @media screen and (max-width: 900px) {
@@ -179,5 +172,25 @@ export const ChartArtist = styled.span`
     opacity: .6;
     @media screen and (max-width: 1050px) {
         font-size: 9px;
+    }
+`;
+
+export const Btn_play_type1 = styled.button`
+    left: 40px;
+    top: auto;
+    bottom: 40px;
+
+    z-index: 4;
+    position: absolute;
+    color: transparent;
+    text-indent: 100%;
+    background-image: url('https://www.music-flo.com/img/sp_button.8292213d.png');
+    background-position: -119px -208px;
+    width: 54px;
+    height: 54px;
+    user-select: none;
+
+    :hover {
+        background-position: -60px -208px;
     }
 `;

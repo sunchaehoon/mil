@@ -1,3 +1,14 @@
+button {
+    outline: none;
+    background-color: transparent;  /* 이미지 배경 투명*/
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
 .MIL-recommend {
     position: relative;
     display: block;
@@ -8,25 +19,6 @@
     background-color: #4c4863;
     border-radius: 6px;
 }
-
-/* th, ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-} */
-
-li, ol, ul {
-    list-style: none;
-}
-
-/* h4 {
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-} */
 
 .chart_thumbnail {
     width: 45px;

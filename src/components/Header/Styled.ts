@@ -80,6 +80,11 @@ export const HdSearchInp = styled.input`
     width: 100%;
     font-size: 14px;
     border: 0;
+    vertical-align: baseline;
+
+    :focus {
+        outline: none;
+    }
 `;
 
 export const SearchImg = styled.img`

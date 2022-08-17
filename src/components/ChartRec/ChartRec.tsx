@@ -5,18 +5,13 @@ import './style.css';
 import axios from 'axios';
 
 const ChartRec = () => {
-   const [data, setData]: any = useState([]);
-
-   const pgTitle = document.querySelector('title');
-   if (pgTitle instanceof Element) {
-      pgTitle.innerHTML = 'MIL | Home';
-   }
+   const [BaladChart, setBaladChart]: any = useState([]);
 
    useEffect(() => {
       axios
          .get('http://localhost:4000/BaladChart')
          .then((response) => {
-            setData(response.data);
+            setBaladChart(response.data);
          })
          .catch(() => {
             console.log('something wrong.');
@@ -31,9 +26,9 @@ const ChartRec = () => {
                   <S.ThumbnailWiper>
                      <S.SwiperSlide>
                         <Link
-                           className="MIL-recommend"
                            to="/detail/ballad"
                            title="오늘 퇴근하고 혼술하며 함께 할 인디 상세보기"
+                           className="MIL-recommend"
                         >
                            <S.RecommendHead>
                               <S.RecommendHeadH4>
@@ -48,22 +43,22 @@ const ChartRec = () => {
                            <S.AlbumList>
                               <S.RecommendTrackHome>
                                  <S.RecommendTrackList>
-                                    {data.map(function (
+                                    {BaladChart.map(function (
                                        a: string | number,
                                        i: number,
                                     ): any {
                                        return (
-                                          <li key={data[i].rank}>
+                                          <li key={BaladChart[i].rank}>
                                              <S.ThumbnailChart>
                                                 <img
-                                                   src={data[i].url}
-                                                   alt={`${data[i].artist} / ${data[i].url}`}
+                                                   src={BaladChart[i].url}
+                                                   alt={`${BaladChart[i].artist} / ${BaladChart[i].url}`}
                                                    className="chart_thumbnail"
                                                 />
                                                 <S.ChartTitle>
-                                                   {data[i].title}
+                                                   {BaladChart[i].title}
                                                    <S.ChartArtist>
-                                                      {data[i].artist}
+                                                      {BaladChart[i].artist}
                                                    </S.ChartArtist>
                                                 </S.ChartTitle>
                                              </S.ThumbnailChart>
@@ -73,23 +68,23 @@ const ChartRec = () => {
                                  </S.RecommendTrackList>
 
                                  <S.RecommendTrackList className="recommend_track_list">
-                                    {data.map(function (
+                                    {BaladChart.map(function (
                                        a: string | number,
                                        i: number,
                                     ): any {
                                        while (i >= 4) {
                                           return (
-                                             <li key={data[i].rank}>
+                                             <li key={BaladChart[i].rank}>
                                                 <S.ThumbnailChart>
                                                    <img
-                                                      src={data[i].url}
-                                                      alt={`${data[i].artist} / ${data[i].url}`}
+                                                      src={BaladChart[i].url}
+                                                      alt={`${BaladChart[i].artist} / ${BaladChart[i].url}`}
                                                       className="chart_thumbnail"
                                                    />
                                                    <S.ChartTitle>
-                                                      {data[i].title}
+                                                      {BaladChart[i].title}
                                                       <S.ChartArtist>
-                                                         {data[i].artist}
+                                                         {BaladChart[i].artist}
                                                       </S.ChartArtist>
                                                    </S.ChartTitle>
                                                 </S.ThumbnailChart>
@@ -101,7 +96,30 @@ const ChartRec = () => {
                               </S.RecommendTrackHome>
                            </S.AlbumList>
                         </Link>
+                        <S.Btn_play_type1 title="오늘 퇴근하고 혼술하며 함께 할 인디">
+                           전체듣기
+                        </S.Btn_play_type1>
                      </S.SwiperSlide>
+
+                     {/* <S.SwiperSlide>
+                        <Link
+                           to="/detail/dance"
+                           title="기분전환에 딱! 드라이빙 댄스"
+                           className="MIL-recommend"
+                        >
+                           <S.RecommendHead>
+                              <S.RecommendHeadH4>
+                                 기분전환에 딱! 드라이빙 댄스
+                              </S.RecommendHeadH4>
+                           </S.RecommendHead>
+                           <S.TotalStatusData>
+                              총 18곡
+                              <S.BarNormal>|</S.BarNormal>
+                              2022.5.11
+                           </S.TotalStatusData>
+                        </Link>
+                     </S.SwiperSlide> */}
+                     
                   </S.ThumbnailWiper>
                </S.SectionContents>
             </S.Recommendsection>

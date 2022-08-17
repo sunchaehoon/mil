@@ -11,6 +11,11 @@ import axios from 'axios';
 // };
 
 const Home = () => {
+   const pgTitle = document.querySelector('title');
+   if (pgTitle instanceof Element) {
+      pgTitle.innerHTML = 'MIL | Home';
+   }
+
    return (
       <>
          <S.App>

@@ -56,5 +56,63 @@
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/570/423/06/04/406423570_6107b4c7_s.jpg?1627894985655/dims/resize/140x140/quality/90"
         }
+    ],
+    "DanceChart": [
+        {
+            "rank": 1,
+            "title": "Feel My Rhythm",
+            "artist": "Red Velvet (레드벨벳)",
+            "release": 2022,
+            "url": "https://cdn.music-flo.com/image/v2/album/995/841/07/04/407841995_62342270_s.jpg?1647583859745/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 2,
+            "title": "MY BAG",
+            "artist": "(여자)아이들",
+            "release": 2022,
+            "url": "https://cdn.music-flo.com/image/v2/album/779/766/07/04/407766779_622ea3d0_s.jpg?1647223763916/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 3,
+            "title": "WA DA DA",
+            "artist": "Kep1er (케플러)",
+            "release": 2022,
+            "url": "https://cdn.music-flo.com/image/v2/album/252/227/07/04/407227252_61ce7154_s.jpg?1640919381792/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 4,
+            "title": "ELEVEN",
+            "artist": "IVE (아이브)",
+            "release": 2021,
+            "url": "https://cdn.music-flo.com/image/v2/album/543/048/07/04/407048543_61a6d895_s.jpg?1638324375781/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 5,
+            "title": "My Universe",
+            "artist": "Coldplay & 방탄소년단",
+            "release": 2021,
+            "url": "https://cdn.music-flo.com/image/v2/album/082/572/06/04/406572082_614c3697_s.jpg?1632384667928/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 6,
+            "title": "ASAP",
+            "artist": "STAYC (스테이씨)",
+            "release": 2021,
+            "url": "https://cdn.music-flo.com/image/v2/album/970/050/06/04/406050970_606d65f5_s.jpg?1617782262996/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 7,
+            "title": "strawberry moon",
+            "artist": "아이유 (IU)",
+            "release": 2021,
+            "url": "https://cdn.music-flo.com/image/v2/album/151/813/06/04/406813151_616d1cd2_s.jpg?1634540756797/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 8,
+            "title": "Universe (Let's Play Ball)",
+            "artist": "NCT U",
+            "release": 2021,
+            "url": "https://cdn.music-flo.com/image/v2/album/186/068/07/04/407068186_61b7eb8e_s.jpg?1639443344120/dims/resize/140x140/quality/90"
+        }
     ]
 }
