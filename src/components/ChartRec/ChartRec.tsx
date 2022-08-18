@@ -8,10 +8,8 @@ import DanceChartSlide from 'components/ChartSlide/DanceChartSlide/DanceChartSli
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
-import Slider, {Settings} from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import SimpleSlider from 'components/ChartSlide/SimpleSlider';
-
-
 
 // interface NextArrowProps {
 //    className?: any;
@@ -23,22 +21,8 @@ import SimpleSlider from 'components/ChartSlide/SimpleSlider';
 //    return <div className={className} style={{ ...style, display: 'block', background: 'red' }} onClick={onClick} />;
 //  }
 const ChartRec = () => {
-
-   // const ChartSlider = () => {
-   //    const settings = {
-   //       dots: true,
-   //       infinite: true,
-   //       speed: 500,
-   //       autoplay: true,
-   //       autoplaySpeed: 2000,
-   //       slidesToShow: 2,
-   //       slidesToScroll: 1,
-   //       centerMode: true,
-   //       centerPadding: '0px',
-   //    };
-   // }
-   
-
+   const slides = ['Balad', 'Dance'];
+   const [currentIndex, setCurrentIndex] = useState(0);
 
    return (
       <S.SectionHome>
@@ -46,19 +30,53 @@ const ChartRec = () => {
             <S.Recommendsection>
                <S.SectionContents>
                   <S.ThumbnailWiper>
-
-                     <SimpleSlider />
-
+                     <div className="slider-area">
+                        <div className="slider">
+                           <div className="slider-list">
+                              <div
+                                 className="slider-track"
+                                 style={{
+                                    transform: `translateX(${
+                                       ( 0 / slides.length) *
+                                       (0.5 + currentIndex)
+                                    }%)`,
+                                 }}
+                              >
+                                 {/* {slides.map((color, index) => (
+                                    <div key={index} className="slider-item">
+                                       <a>
+                                          <div style={{ background: color }}>
+                                             {index}
+                                          </div>
+                                       </a>
+                                    </div>
+                                 ))} */}
+                                 <BaladChartSlide />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
                   </S.ThumbnailWiper>
+                  
                </S.SectionContents>
+               <S.PagingArrow>
+                  <S.PreviousArrow>
+                     <span>이전</span>
+                  </S.PreviousArrow>
+                  <S.ForwardArrow>
+                     <span>다음</span>
+                  </S.ForwardArrow>
+               </S.PagingArrow>
+               
             </S.Recommendsection>
+            
          </S.sectionInner>
       </S.SectionHome>
    );
 };
 
 export default ChartRec;
-
 
 const settings = {
    dots: true,

@@ -17,6 +17,10 @@ vertical-align: baseline; outline: 0; padding: 0; margin: 0; border: 0;
 }
 
 
+.MIL-logo {
+    margin-left: 3px;
+}
+
 .MIL-logo:active {
     color: #5518ab;
 }
@@ -54,6 +58,7 @@ vertical-align: baseline; outline: 0; padding: 0; margin: 0; border: 0;
 
 .nav2-ul {
     list-style: none;
+    margin-right: 5px;
 }
 
 .nav2-ul li:first-child {

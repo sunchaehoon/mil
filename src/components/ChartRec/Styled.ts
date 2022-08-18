@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const SectionHome = styled.div`
-    padding: 100px 80px 0 80px;
+    width: 955px;
+    padding: 95px 80px 40px 80px;
     margin: 0 auto;
     background-color: #fff;
 `;
 
 export const sectionInner =  styled.div`
     padding-top: 10px;
-    max-width: 955px;
+    max-width: 1600px;
     min-width: 600px;
     margin: 0 auto;
 `;
@@ -193,4 +194,36 @@ export const Btn_play_type1 = styled.button`
     :hover {
         background-position: -60px -208px;
     }
+`;
+
+export const PagingArrow = styled.div`
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 100%;
+`;
+
+export const PreviousArrow = styled.button`
+    left: 0;
+    background-image: url("https://www.music-flo.com/img/sp_button.8292213d.png");
+    background-position: -248px -60px;
+    width: 55px;
+    height: 55px;
+    transform: translate(-100%);
+
+    z-index: 5;
+    position: absolute;
+    top: 126px;
+    color: transparent;
+    text-indent: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+`;
+
+export const ForwardArrow = styled(PreviousArrow)`
+    right: 0;
+    background-position: 0 -208px;
+    transform: translate(100%);
 `;
