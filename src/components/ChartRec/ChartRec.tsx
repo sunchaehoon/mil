@@ -26,7 +26,7 @@ const ChartRec = () => {
 
    return (
       <S.SectionHome>
-         <S.sectionInner>
+         <S.SectionInner>
             <S.Recommendsection>
                <S.SectionContents>
                   <S.ThumbnailWiper>
@@ -37,7 +37,7 @@ const ChartRec = () => {
                                  className="slider-track"
                                  style={{
                                     transform: `translateX(${
-                                       ( 0 / slides.length) *
+                                       (0 / slides.length) *
                                        (0.5 + currentIndex)
                                     }%)`,
                                  }}
@@ -56,7 +56,6 @@ const ChartRec = () => {
                            </div>
                         </div>
                      </div>
-                     
                   </S.ThumbnailWiper>
                   
                </S.SectionContents>
@@ -70,8 +69,7 @@ const ChartRec = () => {
                </S.PagingArrow>
                
             </S.Recommendsection>
-            
-         </S.sectionInner>
+         </S.SectionInner>
       </S.SectionHome>
    );
 };

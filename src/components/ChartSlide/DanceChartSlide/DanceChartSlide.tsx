@@ -90,6 +90,9 @@ const DanceChartSlide = () => {
                </S.RecommendTrackHome>
             </S.AlbumList>
          </Link>
+         <S.Btn_play_type1 title='기분전환에 딱! 드라이빙 댄스'>
+            전체듣기
+         </S.Btn_play_type1>
       </S.SwiperSlide>
    );
 };

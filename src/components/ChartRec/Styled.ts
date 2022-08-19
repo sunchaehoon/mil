@@ -7,7 +7,7 @@ export const SectionHome = styled.div`
     background-color: #fff;
 `;
 
-export const sectionInner =  styled.div`
+export const SectionInner =  styled.div`
     padding-top: 10px;
     max-width: 1600px;
     min-width: 600px;
@@ -15,8 +15,9 @@ export const sectionInner =  styled.div`
 `;
 
 export const Recommendsection = styled.section`
-    display: block;
+    position: relative;
     padding-top: 0!important;
+    
 `;
 
 export const SectionContents = styled.div`
@@ -199,7 +200,6 @@ export const Btn_play_type1 = styled.button`
 export const PagingArrow = styled.div`
     visibility: visible;
     position: absolute;
-    left: 0;
     top: 26px;
     width: 100%;
 `;
@@ -214,16 +214,34 @@ export const PreviousArrow = styled.button`
 
     z-index: 5;
     position: absolute;
-    top: 126px;
-    color: transparent;
+    top: 115px;
+    color: blue;
     text-indent: 100%;
     vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
+    :hover {
+        background-position: -248px 0px;
+    }
 `;
 
-export const ForwardArrow = styled(PreviousArrow)`
+export const ForwardArrow = styled.button`
     right: 0;
+    background-image: url("https://www.music-flo.com/img/sp_button.8292213d.png");
     background-position: 0 -208px;
+    width: 55px;
+    height: 55px;
     transform: translate(100%);
+
+    z-index: 5;
+    position: absolute;
+    top: 115px;
+    color: blue;
+    text-indent: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    :hover {
+        background-position: -248px -120px;
+    }
 `;

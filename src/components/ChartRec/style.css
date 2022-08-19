@@ -9,6 +9,10 @@ li, ol, ul {
     list-style: none;
 }
 
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
 .MIL-recommend {
     position: relative;
     display: block;
