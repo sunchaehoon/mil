@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const SectionHome = styled.div`
-    width: 955px;
+    max-width: 955px;
     padding: 95px 80px 40px 80px;
     margin: 0 auto;
     background-color: #fff;
 `;
 
 export const SectionInner =  styled.div`
-    padding-top: 10px;
+    padding-top: 26px;
     max-width: 1600px;
-    min-width: 600px;
+    min-width: 700px;
     margin: 0 auto;
 `;
 
@@ -200,7 +200,7 @@ export const Btn_play_type1 = styled.button`
 export const PagingArrow = styled.div`
     visibility: visible;
     position: absolute;
-    top: 26px;
+    top: 0px;
     width: 100%;
 `;
 

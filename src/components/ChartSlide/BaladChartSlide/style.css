@@ -13,7 +13,8 @@ li, ol, ul {
     position: relative;
     display: block;
     height: 320px;
-    width: 100%;
+    max-width: 955px;
+    min-width: 700px;
     white-space: normal;
     background-size: cover;
     background-color: #4c4863;
