@@ -1,7 +1,7 @@
 button {
     outline: none;
     background-color: transparent;  /* 이미지 배경 투명*/
-    -webkit-tap-highlight-color: transparent;
+    /* -webkit-tap-highlight-color: transparent; */
     cursor: pointer;
 }
 

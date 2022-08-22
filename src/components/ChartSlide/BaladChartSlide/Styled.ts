@@ -50,7 +50,7 @@ export const SwiperSlide = styled.li`
     position: relative;
     width: 955px;
     overflow: visible;
-    margin-left: 0;
+    left: 0;
     font-size: 26.5px;
 
     @media screen and (max-width: 900px) {

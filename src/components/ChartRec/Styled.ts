@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+type StyledProps = {
+    CurrentCounter: number;
+}
+type btn = {
+	display?: string;
+};
 export const SectionHome = styled.div`
     max-width: 955px;
     padding: 95px 80px 40px 80px;
@@ -9,7 +15,7 @@ export const SectionHome = styled.div`
 
 export const SectionInner =  styled.div`
     padding-top: 26px;
-    max-width: 1600px;
+    max-width: 955px;
     min-width: 700px;
     margin: 0 auto;
 `;
@@ -17,7 +23,6 @@ export const SectionInner =  styled.div`
 export const Recommendsection = styled.section`
     position: relative;
     padding-top: 0!important;
-    
 `;
 
 export const SectionContents = styled.div`
@@ -32,20 +37,16 @@ export const SectionContents = styled.div`
 
 export const ThumbnailWiper = styled.ul`
     position: relative;
-    width: 100%;
+    width: 200%;
     height: 100%;
     z-index: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform,-webkit-transform;
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
+
+    transform: translateX(
+        ${(props: StyledProps) => `-${props.CurrentCounter * 50}%`}
+    );
+    transition: all ease-in-out 0.5s 0s;
 `;
 
 export const SwiperSlide = styled.li`
@@ -133,7 +134,7 @@ export const RecommendTrackList = styled.ul`
         padding: 10px 0;
     }
 `;
-
+``
 export const ThumbnailChart = styled.div`
     display: inline-block;
     font-size: 0px;
@@ -211,6 +212,7 @@ export const PreviousArrow = styled.button`
     width: 55px;
     height: 55px;
     transform: translate(-100%);
+	display: ${(props: btn) => props.display};
 
     z-index: 5;
     position: absolute;
@@ -232,6 +234,7 @@ export const ForwardArrow = styled.button`
     width: 55px;
     height: 55px;
     transform: translate(100%);
+	display: ${(props: btn) => props.display};
 
     z-index: 5;
     position: absolute;
