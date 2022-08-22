@@ -3,9 +3,16 @@ import styled from "styled-components";
 type StyledProps = {
     CurrentCounter: number;
 }
+
 type btn = {
 	display?: string;
 };
+
+type UnderBars = {
+	CurrentCounter?: number;
+	n?: number;
+};
+
 export const SectionHome = styled.div`
     max-width: 955px;
     padding: 95px 80px 40px 80px;
@@ -247,4 +254,28 @@ export const ForwardArrow = styled.button`
     :hover {
         background-position: -248px -120px;
     }
+`;
+
+export const PagingDot = styled.div`
+    text-align: center;
+    padding: 3px 0 10px 15px;
+    font-size: 0;
+`;
+
+export const SwiperBullet = styled.span`
+    cursor: pointer;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    margin-right: 10px;
+    border-radius: 6px;
+    /* background-color: #333; */
+    background-color: ${(props: UnderBars) =>
+		(props.CurrentCounter) === props.n ? '#3f3fff' : '#333'};
+    opacity: ${(props: UnderBars) =>
+        (props.CurrentCounter) === props.n ? '1' : '0.3'};
+
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
 `;

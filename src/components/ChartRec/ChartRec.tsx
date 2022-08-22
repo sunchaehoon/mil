@@ -7,13 +7,9 @@ import BaladChartSlide from 'components/ChartSlide/BaladChartSlide/BaladChartSli
 import DanceChartSlide from 'components/ChartSlide/DanceChartSlide/DanceChartSlide';
 
 const ChartRec = () => {
-   const [currentIndex, setCurrentIndex] = useState(0);
-
    const [disLeft, setDisLeft] = useState('none');
    const [disRight, setDisRIght] = useState('none');
    const [counter, setCounter] = useState<number>(0);
-
-   const [slideLef, setSlideLef] = useState(0);
 
    useEffect(() => {
       if (counter <= 0) {
@@ -30,6 +26,9 @@ const ChartRec = () => {
    };
    const rightBtnClickHandler = () => {
       setCounter(counter + 1);
+   };
+   const underBarClick = (n: number) => {
+      setCounter(n);
    };
 
    return (
@@ -56,6 +55,25 @@ const ChartRec = () => {
                      <span>다음</span>
                   </S.ForwardArrow>
                </S.PagingArrow>
+               <S.PagingDot>
+                  <S.SwiperBullet
+                     CurrentCounter={counter}
+                     n={0}
+                     onClick={() => {
+                        underBarClick(0);
+                     }}
+                  />
+                  <S.SwiperBullet
+                     CurrentCounter={counter}
+                     n={1}
+                     onClick={() => {
+                        underBarClick(1);
+                     }}
+                  />
+                  {/* <S.SwiperBullet />
+                  <S.SwiperBullet />
+                  <S.SwiperBullet /> */}
+               </S.PagingDot>
             </S.Recommendsection>
          </S.SectionInner>
       </S.SectionHome>
