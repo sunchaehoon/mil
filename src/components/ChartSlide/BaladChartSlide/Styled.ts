@@ -47,7 +47,6 @@ export const ThumbnailWiper = styled.ul`
 `;
 
 export const SwiperSlide = styled.li`
-    
     position: relative;
     width: 955px;
     overflow: visible;

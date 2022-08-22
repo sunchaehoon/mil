@@ -214,7 +214,7 @@ export const PreviousArrow = styled.button`
 
     z-index: 5;
     position: absolute;
-    top: 115px;
+    top: 120px;
     color: blue;
     text-indent: 100%;
     vertical-align: middle;
@@ -235,7 +235,7 @@ export const ForwardArrow = styled.button`
 
     z-index: 5;
     position: absolute;
-    top: 115px;
+    top: 120px;
     color: blue;
     text-indent: 100%;
     vertical-align: middle;

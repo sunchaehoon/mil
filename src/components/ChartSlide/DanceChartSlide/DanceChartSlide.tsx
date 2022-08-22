@@ -21,7 +21,7 @@ const DanceChartSlide = () => {
          <Link
             to="/detail/dance"
             title="기분전환에 딱! 드라이빙 댄스"
-            className="MIL-recommend"
+            className="MIL-recommend-2p"
          >
             <S.RecommendHead>
                <S.RecommendHeadH4>

@@ -24,7 +24,7 @@ const BaladChartSlide = () => {
          <Link
             to="/detail/ballad"
             title="오늘 퇴근하고 혼술하며 함께 할 인디 상세보기"
-            className="MIL-recommend"
+            className="MIL-recommend-1p"
          >
             <S.RecommendHead>
                <S.RecommendHeadH4>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Component } from 'react';
+import React, { useEffect, useState, Component, useRef } from 'react';
 import * as S from './Styled';
 import { Link } from 'react-router-dom';
 import './style.css';
@@ -11,38 +11,50 @@ import styled from 'styled-components';
 import Slider, { Settings } from 'react-slick';
 import SimpleSlider from 'components/ChartSlide/SimpleSlider';
 
-// interface NextArrowProps {
-//    className?: any;
-//    style?: any;
-//    onClick: React.MouseEventHandler<HTMLDivElement>;
-// }
 
-// export default function NextArrow({ className, style, onClick }: NextArrowProps) {
-//    return <div className={className} style={{ ...style, display: 'block', background: 'red' }} onClick={onClick} />;
-//  }
 const ChartRec = () => {
    const slides = ['Balad', 'Dance'];
+   const slideWidth = 955;
    const [currentIndex, setCurrentIndex] = useState(0);
+
+   const [slideLef, setSlideLef] = useState(0);
+   const curSlideLef: any = useRef();
+
+   function PrevBtn() {
+      if (currentIndex === 0) {
+         return;
+      }
+      setCurrentIndex((prev) => prev - 1);
+      curSlideLef.current.style.transform = `translateX(${955}px)`;
+   }
+
+   function ForwBtn() {
+      if(currentIndex === 1) {
+         return;
+      }
+      setCurrentIndex((prev) => prev + 1);
+      curSlideLef.current.style.transform = `translateX(-${955}px)`;
+   }
 
    return (
       <S.SectionHome>
          <S.SectionInner>
             <S.Recommendsection>
                <S.SectionContents>
-                  <S.ThumbnailWiper>
-                     <div className="slider-area">
+                  <S.ThumbnailWiper ref={curSlideLef}>
+                     {/* <div className="slider-area">
                         <div className="slider">
                            <div className="slider-list">
                               <div
                                  className="slider-track"
                                  style={{
                                     transform: `translateX(${
-                                       (0 / slides.length) *
+                                       (-100 / slides.length) *
                                        (0.5 + currentIndex)
                                     }%)`,
                                  }}
-                              >
-                                 {/* {slides.map((color, index) => (
+                              > */}
+                     {/* {slides.map((color, index) => (
                                     <div key={index} className="slider-item">
                                        <a>
                                           <div style={{ background: color }}>
@@ -51,23 +63,22 @@ const ChartRec = () => {
                                        </a>
                                     </div>
                                  ))} */}
-                                 <BaladChartSlide />
-                              </div>
+                     <BaladChartSlide />
+                     <DanceChartSlide />
+                     {/* </div>
                            </div>
                         </div>
-                     </div>
+                     </div> */}
                   </S.ThumbnailWiper>
-                  
                </S.SectionContents>
                <S.PagingArrow>
-                  <S.PreviousArrow>
+                  <S.PreviousArrow onClick={PrevBtn}>
                      <span>이전</span>
                   </S.PreviousArrow>
-                  <S.ForwardArrow>
+                  <S.ForwardArrow onClick={ForwBtn}>
                      <span>다음</span>
                   </S.ForwardArrow>
                </S.PagingArrow>
-               
             </S.Recommendsection>
          </S.SectionInner>
       </S.SectionHome>

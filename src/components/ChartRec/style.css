@@ -13,7 +13,7 @@ article, aside, dialog, figure, footer, header, hgroup, nav, section {
     display: block;
 }
 
-.MIL-recommend {
+/* .MIL-recommend {
     position: relative;
     display: block;
     height: 320px;
@@ -22,9 +22,9 @@ article, aside, dialog, figure, footer, header, hgroup, nav, section {
     background-size: cover;
     background-color: #4c4863;
     border-radius: 6px;
-}
+} */
 
-.chart_thumbnail {
+/* .chart_thumbnail {
     width: 45px;
     height: 45px;
     background-size: 100% auto;
@@ -43,7 +43,7 @@ article, aside, dialog, figure, footer, header, hgroup, nav, section {
 
 .recommend_track_list {
     margin-left: 30px;
-}
+} */
 
 img {
     user-select: none;

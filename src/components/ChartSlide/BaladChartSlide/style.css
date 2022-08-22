@@ -9,12 +9,11 @@ li, ol, ul {
     list-style: none;
 }
 
-.MIL-recommend {
+.MIL-recommend-1p {
     position: relative;
     display: block;
     height: 320px;
-    max-width: 955px;
-    min-width: 700px;
+    min-width: 955px;
     white-space: normal;
     background-size: cover;
     background-color: #4c4863;
