@@ -46,7 +46,7 @@ const DanceChartSlide = () => {
                               <S.ThumbnailChart>
                                  <img
                                     src={DanceChart[i].url}
-                                    alt={`${DanceChart[i].artist} / ${DanceChart[i].url}`}
+                                    alt={`${DanceChart[i].artist} / ${DanceChart[i].title}`}
                                     className="chart_thumbnail"
                                  />
                                  <S.ChartTitle>
@@ -72,7 +72,7 @@ const DanceChartSlide = () => {
                                  <S.ThumbnailChart>
                                     <img
                                        src={DanceChart[i].url}
-                                       alt={`${DanceChart[i].artist} / ${DanceChart[i].url}`}
+                                       alt={`${DanceChart[i].artist} / ${DanceChart[i].title}`}
                                        className="chart_thumbnail"
                                     />
                                     <S.ChartTitle>

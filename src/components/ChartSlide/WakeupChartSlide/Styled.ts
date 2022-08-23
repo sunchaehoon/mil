@@ -1,34 +1,20 @@
 import styled from "styled-components";
 
-type StyledProps = {
-    CurrentCounter: number;
-}
-
-type btn = {
-	display?: string;
-};
-
-type UnderBars = {
-	CurrentCounter?: number;
-	n?: number;
-};
-
 export const SectionHome = styled.div`
-    max-width: 955px;
-    padding: 95px 80px 40px 80px;
+    padding: 100px 80px 0 80px;
     margin: 0 auto;
     background-color: #fff;
 `;
 
-export const SectionInner =  styled.div`
-    padding-top: 26px;
+export const sectionInner =  styled.div`
+    padding-top: 10px;
     max-width: 955px;
-    min-width: 700px;
+    min-width: 600px;
     margin: 0 auto;
 `;
 
 export const Recommendsection = styled.section`
-    position: relative;
+    display: block;
     padding-top: 0!important;
 `;
 
@@ -44,7 +30,7 @@ export const SectionContents = styled.div`
 
 export const ThumbnailWiper = styled.ul`
     position: relative;
-    width: 300%;
+    width: 100%;
     height: 100%;
     z-index: 1;
     display: -webkit-box;
@@ -58,19 +44,13 @@ export const ThumbnailWiper = styled.ul`
     transition-property: transform,-webkit-transform;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-
-    transform: translateX(
-        ${(props: StyledProps) => `-${props.CurrentCounter * 100/3}%`}
-    );
-    transition: all ease-in-out 0.5s 0s;
 `;
 
 export const SwiperSlide = styled.li`
-    margin-top: 16px;
     position: relative;
     width: 955px;
     overflow: visible;
-    margin-left: 0;
+    left: 0;
     font-size: 26.5px;
 
     @media screen and (max-width: 900px) {
@@ -150,7 +130,7 @@ export const RecommendTrackList = styled.ul`
         padding: 10px 0;
     }
 `;
-``
+
 export const ThumbnailChart = styled.div`
     display: inline-block;
     font-size: 0px;
@@ -212,79 +192,4 @@ export const Btn_play_type1 = styled.button`
     :hover {
         background-position: -60px -208px;
     }
-`;
-
-export const PagingArrow = styled.div`
-    visibility: visible;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-`;
-
-export const PreviousArrow = styled.button`
-    left: 0;
-    background-image: url("https://www.music-flo.com/img/sp_button.8292213d.png");
-    background-position: -248px -60px;
-    width: 55px;
-    height: 55px;
-    transform: translate(-100%);
-	display: ${(props: btn) => props.display};
-
-    z-index: 5;
-    position: absolute;
-    top: 120px;
-    color: blue;
-    text-indent: 100%;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    :hover {
-        background-position: -248px 0px;
-    }
-`;
-
-export const ForwardArrow = styled.button`
-    right: 0;
-    background-image: url("https://www.music-flo.com/img/sp_button.8292213d.png");
-    background-position: 0 -208px;
-    width: 55px;
-    height: 55px;
-    transform: translate(100%);
-	display: ${(props: btn) => props.display};
-
-    z-index: 5;
-    position: absolute;
-    top: 120px;
-    color: blue;
-    text-indent: 100%;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    :hover {
-        background-position: -248px -120px;
-    }
-`;
-
-export const PagingDot = styled.div`
-    text-align: center;
-    padding: 3px 0 10px 15px;
-    font-size: 0;
-`;
-
-export const SwiperBullet = styled.span`
-    cursor: pointer;
-    display: inline-block;
-    height: 6px;
-    width: 6px;
-    margin-right: 10px;
-    border-radius: 6px;
-    /* background-color: #333; */
-    background-color: ${(props: UnderBars) =>
-		(props.CurrentCounter) === props.n ? '#3f3fff' : '#333'};
-    opacity: ${(props: UnderBars) =>
-        (props.CurrentCounter) === props.n ? '1' : '0.3'};
-
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
 `;

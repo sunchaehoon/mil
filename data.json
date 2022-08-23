@@ -114,5 +114,63 @@
             "release": 2021,
             "url": "https://cdn.music-flo.com/image/v2/album/186/068/07/04/407068186_61b7eb8e_s.jpg?1639443344120/dims/resize/140x140/quality/90"
         }
+    ],
+    "WakeupChart": [
+        {
+            "rank": 1,
+            "title": "Wake Up (Feat. DEAN)",
+            "artist": "Crush",
+            "release": 2019,
+            "url": "https://cdn.music-flo.com/image/album/083/284/04/04/404284083_5de8a1b4.jpg?1575526837588/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 2,
+            "title": "매트리스",
+            "artist": "10CM",
+            "release": 2018,
+            "url": "https://cdn.music-flo.com/image/album/834/402/02/04/402402834_5c9f7692.jpg?1553954451515/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 3,
+            "title": "SURFER",
+            "artist": "1415",
+            "release": 2018,
+            "url": "https://cdn.music-flo.com/image/album/994/856/02/04/402856994_5cc2c2fd.jpg?1556267773995/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 4,
+            "title": "Return (Feat. THAMA)",
+            "artist": "다이나믹 듀오",
+            "release": 2019,
+            "url": "https://cdn.music-flo.com/image/album/766/274/04/04/404274766_5ddcc248.jpg?1574748749512/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 5,
+            "title": "love (Feat. Syd)",
+            "artist": "딘 (DEAN)",
+            "release": 2017,
+            "url": "https://cdn.music-flo.com/image/album/507/841/02/04/402841507_5ce8fbe6.jpg?1558772814779/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 6,
+            "title": "내가 날 모르는 것처럼 (Feat. 카더가든)",
+            "artist": "백예린 (Yerin Baek)",
+            "release": 2019,
+            "url": "https://cdn.music-flo.com/image/album/429/526/02/04/402526429.jpg?1553114160869/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 7,
+            "title": "Domino",
+            "artist": "ADOY",
+            "release": 2019,
+            "url": "https://cdn.music-flo.com/image/album/974/270/04/04/404270974_5dd4e0d70.jpg?1574232280781/dims/resize/140x140/quality/90"
+        },
+        {
+            "rank": 8,
+            "title": "밀착",
+            "artist": "TAEK",
+            "release": 2017,
+            "url": "https://cdn.music-flo.com/image/album/119/841/02/04/402841119_5cc2b05c.jpg?1556263005515/dims/resize/140x140/quality/90"
+        }
     ]
 }

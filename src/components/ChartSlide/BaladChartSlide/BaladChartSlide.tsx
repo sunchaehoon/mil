@@ -48,7 +48,7 @@ const BaladChartSlide = () => {
                               <S.ThumbnailChart>
                                  <img
                                     src={BaladChart[i].url}
-                                    alt={`${BaladChart[i].artist} / ${BaladChart[i].url}`}
+                                    alt={`${BaladChart[i].artist} / ${BaladChart[i].title}`}
                                     className="chart_thumbnail"
                                  />
                                  <S.ChartTitle>
@@ -74,7 +74,7 @@ const BaladChartSlide = () => {
                                  <S.ThumbnailChart>
                                     <img
                                        src={BaladChart[i].url}
-                                       alt={`${BaladChart[i].artist} / ${BaladChart[i].url}`}
+                                       alt={`${BaladChart[i].artist} / ${BaladChart[i].title}`}
                                        className="chart_thumbnail"
                                     />
                                     <S.ChartTitle>

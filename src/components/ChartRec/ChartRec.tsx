@@ -1,23 +1,26 @@
 import React, { useEffect, useState, Component, useRef } from 'react';
 import * as S from './Styled';
-import { Link } from 'react-router-dom';
 import './style.css';
 import axios from 'axios';
 import BaladChartSlide from 'components/ChartSlide/BaladChartSlide/BaladChartSlide';
 import DanceChartSlide from 'components/ChartSlide/DanceChartSlide/DanceChartSlide';
+import WakeupChartSlide from 'components/ChartSlide/WakeupChartSlide/WakeupChartSlide';
 
 const ChartRec = () => {
    const [disLeft, setDisLeft] = useState('none');
-   const [disRight, setDisRIght] = useState('none');
+   const [disRight, setDisRight] = useState('none');
    const [counter, setCounter] = useState<number>(0);
 
    useEffect(() => {
       if (counter <= 0) {
-         setDisRIght('block');
          setDisLeft('none');
-      } else if (counter >= 1) {
+         setDisRight('block');
+      } else if (counter >= 2) {
          setDisLeft('block');
-         setDisRIght('none');
+         setDisRight('none');
+      } else {
+         setDisLeft('block');
+         setDisRight('block');
       }
    }, [counter]);
 
@@ -39,6 +42,7 @@ const ChartRec = () => {
                   <S.ThumbnailWiper CurrentCounter={counter}>
                      <BaladChartSlide />
                      <DanceChartSlide />
+                     <WakeupChartSlide />
                   </S.ThumbnailWiper>
                </S.SectionContents>
                <S.PagingArrow>
@@ -70,8 +74,14 @@ const ChartRec = () => {
                         underBarClick(1);
                      }}
                   />
+                  <S.SwiperBullet
+                     CurrentCounter={counter}
+                     n={2}
+                     onClick={() => {
+                        underBarClick(2);
+                     }}
+                  />
                   {/* <S.SwiperBullet />
-                  <S.SwiperBullet />
                   <S.SwiperBullet /> */}
                </S.PagingDot>
             </S.Recommendsection>
