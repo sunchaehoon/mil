@@ -33,7 +33,6 @@ const ChartRec = () => {
    const underBarClick = (n: number) => {
       setCounter(n);
    };
-   
 
    return (
       <S.SectionHome>
