@@ -76,7 +76,7 @@ export const HeaderSearch = styled.fieldset`
 
 export const HdSearchInp = styled.input`
     position: relative;
-    top: 4px;
+    top: 7px;
     width: 100%;
     font-size: 14px;
     border: 0;

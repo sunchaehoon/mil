@@ -30,4 +30,42 @@ export const SignContainer = styled.div`
     margin: 70px auto 0 auto;
     background-color: #fff;
     border: 1px solid #d9d9d9;
+    margin-top: 100px;
 `;
+
+export const FormWrapper = styled.div`
+    width: 100%;
+    text-align: left;
+    max-width: 560px;
+    margin: 0 auto;
+`;
+
+export const FormId = styled.div`
+    position: relative;
+    margin: 10px 0 50px 0;
+`;
+
+export const InputId = styled.input`
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ebebeb;
+    height: 58px;
+    vertical-align: middle;
+    color: #181818;
+    padding-right: 38px;
+    ::placeholder {
+        color: #bdbdbd;
+    }
+`;
+
+export const InputPw = styled(InputId)`
+    
+`;
+
+
+
+
+
+
+

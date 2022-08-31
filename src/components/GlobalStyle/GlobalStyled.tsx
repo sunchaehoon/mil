@@ -42,6 +42,15 @@ const globalStyles = createGlobalStyle`
         color: #333;
         width: 100%;
     }
+
+    button, input, select, textarea {
+        font-family: inherit;
+        vertical-align: middle;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
     
     ${reset};
 `;
