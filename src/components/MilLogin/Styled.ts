@@ -59,6 +59,19 @@ export const InputId = styled.input`
     }
 `;
 
+export const InputResetBtn = styled.button`
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAAAXNSR0IArs4c6QAAAeFJREFUaAXtmDFSwzAQRWPaFKlgnDpluAFV0lJxUipaU3GDpHTtDDSkcG32gzTjUSxHkVai+ZoxdtbSat+TMCaLBRsN0AAN0AAN0AAN0AAN0AAN0AAN0AANpBqoUhPY8ev1+k2uV8MwvJxOpy8bjznXdX1fVdWrjD13Xfcck8Mdc+cGEj4D8knGNyg0No8Z25hcq9g87jg1UKykJD/I8ShHFKyFNDkOJqd8TG9qWxeluIVKaB+6jVPGhmhQBY2FzQ2JutRBJ2CPEtv5VtZAvkufrRzY+sG7QPoGtyygmN0BmIQN6RNMcqVjNtBrsCUhUUtWUB8s4tLsdp1c7b8uej+zg6LUidVDGL+TRSAxWRFQTOTAIlQMEpOpvTAg2VxbLpcXUqdiczlS7l1MnpLMN3az2Tz0fd/Ifbtd0fX3WmD3bdt++sZqxbODupAAQ/Fj8BKwWUGnIO3qzd3TWsVxnmygISBuHynM+wY1LjrmOguo84Q9zm3NUrDqoLdA2pUpAasK6kLeshVTxlphc2c1UI1CNXL4YNVeGMx3PPbvZNRDxfwrt5Ni8da0NTl9td8UVwOVWc9S2IecoyBt1YDFwwu55KuUbxvnmQZogAZogAZogAZogAZogAZogAZogAb+38AP9dn9eh9f170AAAAASUVORK5CYII=') 0 0 no-repeat;
+    left: auto;
+    right: 0;
+    display: block !important;
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    text-indent: -9999em;
+    background-size: 100%;
+    top: 1rem;
+`;
+
 export const InputPw = styled(InputId)`
     
 `;
