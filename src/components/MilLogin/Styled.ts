@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type delInputBtn = {
+    display: string;
+}
+
 export const App = styled.div`
     padding-bottom: 111px;
 `;
@@ -70,6 +74,7 @@ export const InputResetBtn = styled.button`
     text-indent: -9999em;
     background-size: 100%;
     top: 1rem;
+    display: ${(props: delInputBtn) => props.display};
 `;
 
 export const InputPw = styled(InputId)`
