@@ -9,22 +9,37 @@ const MilLogin = () => {
    }
 
    const inputId: any = document.getElementById('id-input');
-   const inputIdBtn: any = document.getElementById('id-input-btn');
+   const inputPw: any = document.getElementById('pw-input');
    const [inputIdShow, setInputIdShow] = useState('none');
+   const [inputPwShow, setInputPwShow] = useState('none');
    const [inputWrite, chgInputWrite] = useState({ write: false });
-   const [idText, setIdText] = useState('');
+   const [idText, setIdText] = useState<string>('');
+   const [pwText, setPwText] = useState<string>('');
 
-   function delInput() {
+   function delIdInput() {
       setIdText('');
+      setInputIdShow('none');
       inputId.focus();
    }
+   function delPwInput() {
+      setPwText('');
+      setInputPwShow('none');
+      inputPw.focus();
+   }
+
    const idChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setIdText(e.target.value);
-      if (idText != '') {
-         // inputIdBtn.style.display = 'none';
-         setInputIdShow('block');
-      } else {
+      if (inputId.value == '') {
          setInputIdShow('none');
+      } else {
+         setInputIdShow('block');
+      }
+      setIdText(e.target.value);
+   };
+   const pwChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (inputPw.value == '') {
+         setInputPwShow('none');
+      } else {
+         setInputPwShow('block');
       }
    };
 
@@ -38,7 +53,7 @@ const MilLogin = () => {
                   <S.ViewWrap>
                      <S.SignContainer>
                         <S.FormWrapper>
-                           <S.FormId>
+                           <S.FormLgn>
                               <S.InputId
                                  id="id-input"
                                  type="text"
@@ -52,11 +67,26 @@ const MilLogin = () => {
                               />
                               <S.InputResetBtn
                                  display={inputIdShow}
-                                 onClick={delInput}
+                                 onClick={delIdInput}
                               >
                                  초기화
                               </S.InputResetBtn>
-                           </S.FormId>
+                           </S.FormLgn>
+
+                           <S.FormLgn>
+                              <S.InputPw
+                                 id="pw-input"
+                                 type="password"
+                                 name="password"
+                                 placeholder="비밀번호"
+                                 autoComplete="off"
+                                 spellCheck="false"
+                              />
+                              <S.InputResetBtn>
+                                 display={inputPwShow}
+                                 onClick={delPwInput}
+                              </S.InputResetBtn>
+                           </S.FormLgn>
                         </S.FormWrapper>
                      </S.SignContainer>
                   </S.ViewWrap>
