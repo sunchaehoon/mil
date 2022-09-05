@@ -28,14 +28,15 @@ const MilLogin = () => {
    }
 
    const idChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setIdText(e.target.value);
       if (inputId.value == '') {
          setInputIdShow('none');
       } else {
          setInputIdShow('block');
       }
-      setIdText(e.target.value);
    };
    const pwChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPwText(e.target.value);
       if (inputPw.value == '') {
          setInputPwShow('none');
       } else {
@@ -80,11 +81,15 @@ const MilLogin = () => {
                                  name="password"
                                  placeholder="비밀번호"
                                  autoComplete="off"
+                                 autoCorrect='off'
                                  spellCheck="false"
+                                 value={pwText}
+                                 onChange={pwChange}
                               />
-                              <S.InputResetBtn>
+                              <S.InputResetBtn
                                  display={inputPwShow}
                                  onClick={delPwInput}
+                              >
                               </S.InputResetBtn>
                            </S.FormLgn>
                         </S.FormWrapper>
