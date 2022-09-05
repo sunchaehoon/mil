@@ -4,17 +4,14 @@ import * as S from './Styled';
 import './style.css';
 
 const MilLogin = () => {
-   interface IsInputWrite {
-      write: boolean;
-   }
 
    const inputId: any = document.getElementById('id-input');
    const inputPw: any = document.getElementById('pw-input');
-   const [inputIdShow, setInputIdShow] = useState('none');
-   const [inputPwShow, setInputPwShow] = useState('none');
-   const [inputWrite, chgInputWrite] = useState({ write: false });
+   const [inputIdShow, setInputIdShow] = useState<string>('none');
+   const [inputPwShow, setInputPwShow] = useState<string>('none');
    const [idText, setIdText] = useState<string>('');
    const [pwText, setPwText] = useState<string>('');
+   const [pwToggle, setPwToggle] = useState<boolean>(false);
 
    function delIdInput() {
       setIdText('');
@@ -25,6 +22,10 @@ const MilLogin = () => {
       setPwText('');
       setInputPwShow('none');
       inputPw.focus();
+   }
+
+   function clickPwToggle() {
+      setPwToggle((prev) => !prev);
    }
 
    const idChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +78,7 @@ const MilLogin = () => {
                            <S.FormLgn>
                               <S.InputPw
                                  id="pw-input"
-                                 type="password"
+                                 type={pwToggle ? "text" : "password"}
                                  name="password"
                                  placeholder="비밀번호"
                                  autoComplete="off"
@@ -86,12 +87,15 @@ const MilLogin = () => {
                                  value={pwText}
                                  onChange={pwChange}
                               />
-                              <S.InputResetBtn
+                              <S.ShowPwBtn onClick={clickPwToggle} pwToggle={pwToggle} />
+                              <S.InputPwResetBtn
                                  display={inputPwShow}
                                  onClick={delPwInput}
                               >
-                              </S.InputResetBtn>
+                                 초기화
+                              </S.InputPwResetBtn>
                            </S.FormLgn>
+
                         </S.FormWrapper>
                      </S.SignContainer>
                   </S.ViewWrap>
