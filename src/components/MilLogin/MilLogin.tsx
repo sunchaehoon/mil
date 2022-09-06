@@ -1,10 +1,10 @@
 import Header from 'components/Header/Header';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './Styled';
 import './style.css';
 
 const MilLogin = () => {
-
    const inputId: any = document.getElementById('id-input');
    const inputPw: any = document.getElementById('pw-input');
    const [inputIdShow, setInputIdShow] = useState<string>('none');
@@ -12,6 +12,7 @@ const MilLogin = () => {
    const [idText, setIdText] = useState<string>('');
    const [pwText, setPwText] = useState<string>('');
    const [pwToggle, setPwToggle] = useState<boolean>(false);
+   const [idSaveToggle, setIdSaveToggle] = useState<boolean>(false);
 
    function delIdInput() {
       setIdText('');
@@ -26,6 +27,10 @@ const MilLogin = () => {
 
    function clickPwToggle() {
       setPwToggle((prev) => !prev);
+   }
+
+   function clickIdSaveToggle() {
+      setIdSaveToggle((prev) => !prev);
    }
 
    const idChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,16 +83,19 @@ const MilLogin = () => {
                            <S.FormLgn>
                               <S.InputPw
                                  id="pw-input"
-                                 type={pwToggle ? "text" : "password"}
+                                 type={pwToggle ? 'text' : 'password'}
                                  name="password"
                                  placeholder="비밀번호"
                                  autoComplete="off"
-                                 autoCorrect='off'
+                                 autoCorrect="off"
                                  spellCheck="false"
                                  value={pwText}
                                  onChange={pwChange}
                               />
-                              <S.ShowPwBtn onClick={clickPwToggle} pwToggle={pwToggle} />
+                              <S.ShowPwBtn
+                                 onClick={clickPwToggle}
+                                 pwToggle={pwToggle}
+                              />
                               <S.InputPwResetBtn
                                  display={inputPwShow}
                                  onClick={delPwInput}
@@ -96,6 +104,18 @@ const MilLogin = () => {
                               </S.InputPwResetBtn>
                            </S.FormLgn>
 
+                           <S.SaveLogin>
+                              <S.SaveId>
+                                 <S.SignSaveId>
+                                    <S.SaveIdBox />
+                                    <S.SaveIdSpan onClick={clickIdSaveToggle} idSaveToggle={idSaveToggle}>아이디 저장</S.SaveIdSpan>
+                                 </S.SignSaveId>
+                              </S.SaveId>
+
+                              <Link to="#" id='login-btn' className='disabled'>
+                                 <span>로그인</span>
+                              </Link>
+                           </S.SaveLogin>
                         </S.FormWrapper>
                      </S.SignContainer>
                   </S.ViewWrap>

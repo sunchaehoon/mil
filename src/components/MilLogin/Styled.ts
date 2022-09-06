@@ -8,6 +8,10 @@ type pwToggle = {
     pwToggle: boolean;
 }
 
+type idSaveToggle = {
+    idSaveToggle: boolean;
+}
+
 export const App = styled.div`
     padding-bottom: 111px;
 `;
@@ -50,7 +54,8 @@ export const FormWrapper = styled.div`
 
 export const FormLgn = styled.div`
     position: relative;
-    margin: 10px 0 50px 0;
+    margin: 10px 0 20px 0;
+    margin-bottom: 30px;
 `;
 
 export const InputId = styled.input`
@@ -97,6 +102,53 @@ export const ShowPwBtn = styled.button`
     top: 1.0625rem;
     right: 0;
 `;
+
+export const SaveLogin = styled.div`
+    margin-top: 10px;
+    width: 100%;
+    margin: 0 auto;
+`;
+
+export const SaveId = styled.p`
+    margin-bottom: 20px;
+`;
+
+export const SignSaveId = styled.label`
+    display: inline-block;
+    position: relative;
+`;
+
+export const SaveIdBox = styled.input`
+    position: absolute;
+    left: -9999em;
+`;
+
+export const SaveIdSpan = styled.span`
+    color: #333;
+    overflow: hidden;
+    display: block;
+    font-size: 16px;
+    padding: 0 0 0 38px;
+    min-height: 25px;
+    line-height: 25px;
+    user-select: none;
+
+    ::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABkCAYAAADE6GNbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1NkNGNzlENDJEMTFFODlFNjFFQUY4MDkxOTAzRDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1NkNGN0FENDJEMTFFODlFNjFFQUY4MDkxOTAzRDAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRDU2Q0Y3N0Q0MkQxMUU4OUU2MUVBRjgwOTE5MDNEMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRDU2Q0Y3OEQ0MkQxMUU4OUU2MUVBRjgwOTE5MDNEMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm7g8NEAAAO1SURBVHja7JtNKHRhFMf/dxoNUUqRWaixsZkNJWpKNJSSlZ0iydfKxkchiRT5XqB8ZkOysGOhpjELY8OCxWRFYjHKApliQvd9jnvng8X7Gh/jPm/n1Mw854mc35z7nOc81/8q0E1VVWV/f79RfDYI1y5eKTCmBcTLpyjKssPhWBKfKk0q9HZ4eGgNBoOrAsIJiUxAuC0WS01+fr7frGfiFUJMqjabTUlNTUVCQoIhg396esLd3R3Oz89V8eU79QSUKV6vt0kMFggiNzdXMZvNUmTj+fkZR0dHBCMSozSb9DUByoQsEGQUK8Wsr+8Gk76wQZeTbBYVs90Uqk5GXRN/s6iYU0z4T4xBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGOQ9CGk7XhUFsllUzAEC8dGIZBGyWVTMPhOpbGhE2g6SRchiFCvFTGNiUHRRjUtSUQ3pUNwOh6Psv5E5KaFJ2YVnb+RAPT0OQRkCM2oWIvF5PFHz9FZerlofH7Eqhk7JCpc7MRE1OzuKn/RaiqQQZE6KnRiU4mK1SUwsSL6xN4t9BA2ytyfEEFbQSW52sUYMW2Y/bMTAbTyDMAiDMMiXLTlZBGaSHKRB9BlbW8DcXGy/ZyhVf309UFurjTMzJc1IdTVQVxc5a8zOSghSVQW0tET8mRlgZ0cykIoKoLU14i8uApubklWt0lKgoyNyfF0Vx7u1NcnKb1ER0N0dKbOUhaUlyfaRggKgr48eL9L87W1gejqOG2JhITA6ChQXf/4P5uUBg4P0NI7mu1zA+Hicd3aq8/Rt9vcDlZWfOMaJs+jQEGCxaP7eHjA8/D23nmIC2d0Nn5HR3h4bTE4OMDICJCVp/sEBMDAAvLz8Qq+1sQGsr8cOk50NjI0BKfqh+vgY6O2l+7i/2DTOz8cGk5UFTEzQo3aaf3ICdHUBwaABut+PwlC/RBBpaZp/egp0dgIPDwZq4/8Fk54OTE0BGRmaf3Gh/Uwg8DMl/UvdL8GEGr4QDJnXC0xOAlar5vv9QFsbcHv7c3sT3TL9cvGjho9gQp3r9XUkEzSmXurqSoIT4vvLLARxc6Nl4qchvrVFiYYhu7/XLrXLy/i0Pd96QiQYyojNBqysAGdn8evfvmWN8F0UBmEQBmEQBmEQo4CIliIgOwQxhBV0kpuP/s++LDsFMbwq6EpK4IKcohoyt8eDMtI0qiQVogkZISh2YnijoBOZadRFNnajSjv04uSjy0lkIqyg+yPAAHL6cgYajojrAAAAAElFTkSuQmCC');
+        background-position: ${(props: idSaveToggle) => (!props.idSaveToggle ? "0 0" : "0 -20px")};
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+`;
+
+
 
 
 
