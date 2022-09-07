@@ -113,7 +113,7 @@ const MilLogin = () => {
                               </S.SaveId>
 
                               <Link to="#" id='login-btn' className='disabled'>
-                                 <span>로그인</span>
+                                 <S.LoginBtnSpan>로그인</S.LoginBtnSpan>
                               </Link>
                            </S.SaveLogin>
                         </S.FormWrapper>

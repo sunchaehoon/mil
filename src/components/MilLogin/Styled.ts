@@ -132,6 +132,15 @@ export const SaveIdSpan = styled.span`
     min-height: 25px;
     line-height: 25px;
     user-select: none;
+    font-weight: 100;
+    font-family: 'Happiness-Sans-Title';
+
+    @font-face {
+        font-family: 'Happiness-Sans-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
 
     ::before {
         content: "";
@@ -145,6 +154,18 @@ export const SaveIdSpan = styled.span`
         background-position: ${(props: idSaveToggle) => (!props.idSaveToggle ? "0 0" : "0 -20px")};
         background-repeat: no-repeat;
         background-size: 100%;
+    }
+`;
+
+export const LoginBtnSpan = styled.span`
+    font-family: 'Happiness-Sans-Title';
+    font-size: 1.2rem;
+    font-weight: 100;
+    @font-face {
+        font-family: 'Happiness-Sans-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
     }
 `;
 

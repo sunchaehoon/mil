@@ -1,4 +1,22 @@
-#login-btn
+#login-btn {
+    height: 62px;
+    line-height: 62px;
+    font-size: 18px;
+    
+    width: 100%;
+    display: block;
+    background-color: #3f3fff;
+    font-size: .9375rem;
+    font-weight: 600;
+    color: #fff;
+    height: 3.925rem;
+    text-align: center;
+    line-height: 3.925rem;
+    margin-bottom: 0.625rem;
+    text-decoration-line: none;
+    border-radius: 5px;
+}
+
 
 #login-btn .disabled {
     pointer-events: none;
