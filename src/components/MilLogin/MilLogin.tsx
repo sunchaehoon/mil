@@ -116,6 +116,13 @@ const MilLogin = () => {
                                  <S.LoginBtnSpan>로그인</S.LoginBtnSpan>
                               </Link>
                            </S.SaveLogin>
+
+                           <S.FindIdPw>
+                              <S.FindIdLi>
+                                 <Link to="" className='link-style'>아이디 찾기</Link>
+                              </S.FindIdLi>
+                           </S.FindIdPw>
+
                         </S.FormWrapper>
                      </S.SignContainer>
                   </S.ViewWrap>

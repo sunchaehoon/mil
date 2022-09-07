@@ -36,12 +36,15 @@ export const ViewWrap = styled.div`
 
 export const SignContainer = styled.div`
     padding: 50px 120px;
-    width: 680px;
+    width: 682px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 70px auto 0 auto;
     background-color: #fff;
-    border: 1px solid #d9d9d9;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(217, 217, 217);
+    border-image: initial;
     margin-top: 100px;
 `;
 
@@ -104,7 +107,7 @@ export const ShowPwBtn = styled.button`
 `;
 
 export const SaveLogin = styled.div`
-    margin-top: 10px;
+    margin-top: -10px;
     width: 100%;
     margin: 0 auto;
 `;
@@ -166,6 +169,21 @@ export const LoginBtnSpan = styled.span`
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
+    }
+`;
+
+export const FindIdPw = styled.div`
+    width: 100%;
+    position: absolute;
+    margin-top: 0.9375rem;
+`;
+
+export const FindIdLi = styled.li`
+    position: relative;
+    padding: 0 0.5625rem;
+    display: inline-block;
+    :first-child {
+        padding-left: 0;
     }
 `;
 
