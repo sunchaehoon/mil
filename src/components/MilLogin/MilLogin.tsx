@@ -50,6 +50,11 @@ const MilLogin = () => {
       }
    };
 
+   const pgTitle = document.querySelector('title');
+   if (pgTitle instanceof Element) {
+      pgTitle.innerHTML = 'MIL | Login';
+   }
+
    return (
       <>
          <S.App>
@@ -108,21 +113,38 @@ const MilLogin = () => {
                               <S.SaveId>
                                  <S.SignSaveId>
                                     <S.SaveIdBox />
-                                    <S.SaveIdSpan onClick={clickIdSaveToggle} idSaveToggle={idSaveToggle}>아이디 저장</S.SaveIdSpan>
+                                    <S.SaveIdSpan
+                                       onClick={clickIdSaveToggle}
+                                       idSaveToggle={idSaveToggle}
+                                    >
+                                       아이디 저장
+                                    </S.SaveIdSpan>
                                  </S.SignSaveId>
                               </S.SaveId>
 
-                              <Link to="#" id='login-btn' className='disabled'>
+                              <Link to="#" id="login-btn" className="disabled">
                                  <S.LoginBtnSpan>로그인</S.LoginBtnSpan>
                               </Link>
                            </S.SaveLogin>
 
                            <S.FindIdPw>
-                              <S.FindIdLi>
-                                 <Link to="" className='link-style'>아이디 찾기</Link>
-                              </S.FindIdLi>
+                              <ul>
+                                 <S.FindIdLi>
+                                    <Link to="" className="link-style">
+                                       아이디 찾기
+                                    </Link>
+                                 </S.FindIdLi>
+                                 <S.FindIdLi>
+                                    <Link
+                                       to=""
+                                       id="identify"
+                                       className="link-style"
+                                    >
+                                       비밀번호 찾기
+                                    </Link>
+                                 </S.FindIdLi>
+                              </ul>
                            </S.FindIdPw>
-
                         </S.FormWrapper>
                      </S.SignContainer>
                   </S.ViewWrap>

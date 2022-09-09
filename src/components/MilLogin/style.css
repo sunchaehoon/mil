@@ -26,6 +26,14 @@
 .link-style {
     text-decoration: none;
     color: #929292;
-    font-size: 0.875rem;
+    font-size: 0.775rem;
     white-space: nowrap;
+}
+
+#identify::before {
+    content: "|";
+    color: #c4c4c4;
+    position: absolute;
+    left: 0;
+    top: 2px;
 }

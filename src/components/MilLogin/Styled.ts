@@ -174,7 +174,7 @@ export const LoginBtnSpan = styled.span`
 
 export const FindIdPw = styled.div`
     width: 100%;
-    position: absolute;
+    position: relative;
     margin-top: 0.9375rem;
 `;
 
