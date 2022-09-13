@@ -144,6 +144,9 @@ const MilLogin = () => {
                                     </Link>
                                  </S.FindIdLi>
                               </ul>
+                              <S.SignupLink>
+                                 <Link to="" className='link-signup-style'>회원가입</Link>
+                              </S.SignupLink>
                            </S.FindIdPw>
                         </S.FormWrapper>
                      </S.SignContainer>

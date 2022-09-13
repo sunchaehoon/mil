@@ -170,6 +170,7 @@ export const LoginBtnSpan = styled.span`
         font-weight: normal;
         font-style: normal;
     }
+    user-select: none;
 `;
 
 export const FindIdPw = styled.div`
@@ -185,6 +186,12 @@ export const FindIdLi = styled.li`
     :first-child {
         padding-left: 0;
     }
+`;
+
+export const SignupLink = styled.span`
+    position: absolute;
+    right: 0;
+    top: -1px;
 `;
 
 
