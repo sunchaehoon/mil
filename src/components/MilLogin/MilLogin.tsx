@@ -1,8 +1,9 @@
 import Header from 'components/Header/Header';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as S from './Styled';
 import './style.css';
+import axios from 'axios';
 
 const MilLogin = () => {
    const inputId: any = document.getElementById('id-input');
@@ -13,6 +14,8 @@ const MilLogin = () => {
    const [pwText, setPwText] = useState<string>('');
    const [pwToggle, setPwToggle] = useState<boolean>(false);
    const [idSaveToggle, setIdSaveToggle] = useState<boolean>(false);
+   const [popupShow, setPopupShow] = useState<string>('none');
+   const navigate = useNavigate();
 
    function delIdInput() {
       setIdText('');
@@ -31,6 +34,10 @@ const MilLogin = () => {
 
    function clickIdSaveToggle() {
       setIdSaveToggle((prev) => !prev);
+   }
+
+   function clickPopupBtn() {
+      setPopupShow('none');
    }
 
    const idChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,6 +61,26 @@ const MilLogin = () => {
    if (pgTitle instanceof Element) {
       pgTitle.innerHTML = 'MIL | Login';
    }
+
+   const checkLogin = (e: any) => {
+      e.preventDefault();
+
+      axios
+         .get('http://localhost:4000/users')
+         .then((user) => {
+            user.data.map(function (a: number | string, i: number) {
+               if (user.data[i].id == idText && user.data[i].pw == pwText) {
+                  alert(user.data.nickname[i] + '님 로그인');
+                  navigate(-1);
+               } else {
+                  setPopupShow('block');
+               }
+            });
+         })
+         .catch(() => {
+            console.log('ajax error');
+         });
+   };
 
    return (
       <>
@@ -122,7 +149,12 @@ const MilLogin = () => {
                                  </S.SignSaveId>
                               </S.SaveId>
 
-                              <Link to="#" id="login-btn" className="disabled">
+                              <Link
+                                 to="/"
+                                 id="login-btn"
+                                 className="disabled"
+                                 onClick={checkLogin}
+                              >
                                  <S.LoginBtnSpan>로그인</S.LoginBtnSpan>
                               </Link>
                            </S.SaveLogin>
@@ -145,7 +177,9 @@ const MilLogin = () => {
                                  </S.FindIdLi>
                               </ul>
                               <S.SignupLink>
-                                 <Link to="" className='link-signup-style'>회원가입</Link>
+                                 <Link to="" className="link-signup-style">
+                                    회원가입
+                                 </Link>
                               </S.SignupLink>
                            </S.FindIdPw>
                         </S.FormWrapper>
@@ -154,6 +188,17 @@ const MilLogin = () => {
                </S.MainSection>
             </S.Wrap>
          </S.App>
+
+         <S.PopupContainer display={popupShow}>
+            <S.PopupAlert>
+               <div>
+                  <S.PopupText>아이디 또는 비밀번호가 일치하지 않습니다.</S.PopupText>
+               </div>
+               <S.PopupDiv>
+                  <S.PopupBtn onClick={clickPopupBtn}>확인</S.PopupBtn>
+               </S.PopupDiv>
+            </S.PopupAlert>
+         </S.PopupContainer>
       </>
    );
 };

@@ -1,4 +1,18 @@
 {
+    "users": [
+        {
+            "usernm": 1,
+            "nickname": "선채훈",
+            "id": "chaehoon",
+            "pw": "tjscogns"
+        },
+        {
+            "usernm": 2,
+            "nickname": "선채소",
+            "id": "chaesoe",
+            "pw": "tjscoth"
+        }
+    ],
     "BaladChart": [
         {
             "rank": 1,

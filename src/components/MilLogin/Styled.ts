@@ -12,6 +12,10 @@ type idSaveToggle = {
     idSaveToggle: boolean;
 }
 
+type setPopupDisplay = {
+    display?: string;
+}
+
 export const App = styled.div`
     padding-bottom: 111px;
 `;
@@ -171,6 +175,7 @@ export const LoginBtnSpan = styled.span`
         font-style: normal;
     }
     user-select: none;
+    cursor: pointer;
 `;
 
 export const FindIdPw = styled.div`
@@ -194,9 +199,67 @@ export const SignupLink = styled.span`
     top: -1px;
 `;
 
+export const PopupContainer = styled.div`
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: ${(props: setPopupDisplay) => props.display};
+    ::after {
+        background: rgba(0,0,0,.6);
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+`;
 
+export const PopupAlert = styled.div`
+    position: absolute;
+    width: 340px;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
+    z-index: 200;
+    background: #fff;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+`;
 
+export const PopupText = styled.p`
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Happiness-Sans-Title';
+    @font-face {
+        font-family: 'Happiness-Sans-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+`;
 
+export const PopupDiv = styled.div`
+    margin: 40px 0 0 0;
+    text-align: center;
+`;
+
+export const PopupBtn = styled.button`
+    background-color: #3f3fff;
+    position: relative;
+    color: white;
+    text-align: center;
+    min-width: 85px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+`;
 
 
 
