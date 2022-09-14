@@ -259,6 +259,7 @@ export const PopupBtn = styled.button`
     height: 36px;
     line-height: 36px;
     border-radius: 5px;
+    user-select: none;
 `;
 
 
