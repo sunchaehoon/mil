@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import * as S from './Styled';
 import './style.css';
 import axios from 'axios';
+import fakeAuth from "fake-auth";
 
 const MilLogin = () => {
    const inputId: any = document.getElementById('id-input');
@@ -70,7 +71,7 @@ const MilLogin = () => {
          .then((user) => {
             user.data.map(function (a: number | string, i: number) {
                if (user.data[i].id == idText && user.data[i].pw == pwText) {
-                  alert(user.data.nickname[i] + '님 로그인');
+                  alert(user.data[i].nickname + '님 로그인');
                   navigate(-1);
                } else {
                   setPopupShow('block');
@@ -81,6 +82,8 @@ const MilLogin = () => {
             console.log('ajax error');
          });
    };
+
+   
 
    return (
       <>
