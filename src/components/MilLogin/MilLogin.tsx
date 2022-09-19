@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import * as S from './Styled';
 import './style.css';
 import axios from 'axios';
-import fakeAuth from "fake-auth";
+// import fakeAuth from "fake-auth";
 
 const MilLogin = () => {
    const inputId: any = document.getElementById('id-input');
@@ -17,6 +17,7 @@ const MilLogin = () => {
    const [idSaveToggle, setIdSaveToggle] = useState<boolean>(false);
    const [popupShow, setPopupShow] = useState<string>('none');
    const navigate = useNavigate();
+   const [lgnBtn, setLgnBtn] = useState<boolean>(false);
 
    function delIdInput() {
       setIdText('');
@@ -63,6 +64,10 @@ const MilLogin = () => {
       pgTitle.innerHTML = 'MIL | Login';
    }
 
+   function changeLgnBtn() {
+      idText.includes('@') && pwText.length >= 6 ? setLgnBtn(true) : setLgnBtn(false);
+   }
+
    const checkLogin = (e: any) => {
       e.preventDefault();
 
@@ -106,6 +111,7 @@ const MilLogin = () => {
                                  spellCheck="false"
                                  value={idText}
                                  onChange={idChange}
+                                 onKeyUp={changeLgnBtn}
                               />
                               <S.InputResetBtn
                                  display={inputIdShow}
@@ -126,6 +132,7 @@ const MilLogin = () => {
                                  spellCheck="false"
                                  value={pwText}
                                  onChange={pwChange}
+                                 onKeyUp={changeLgnBtn}
                               />
                               <S.ShowPwBtn
                                  onClick={clickPwToggle}
@@ -155,7 +162,7 @@ const MilLogin = () => {
                               <Link
                                  to="/"
                                  id="login-btn"
-                                 className="disabled"
+                                 className={lgnBtn == false ? "btn_disabled" : ""}
                                  onClick={checkLogin}
                               >
                                  <S.LoginBtnSpan>로그인</S.LoginBtnSpan>

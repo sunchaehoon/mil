@@ -2,10 +2,9 @@
     height: 62px;
     line-height: 62px;
     font-size: 18px;
-    
+    background-color: #3f3fff;
     width: 100%;
     display: block;
-    background-color: #3f3fff;
     font-size: .9375rem;
     font-weight: 600;
     color: #fff;
@@ -17,10 +16,10 @@
 }
 
 
-#login-btn .disabled {
+.btn_disabled {
     pointer-events: none;
     cursor: default;
-    background-color: #d9d9ff;
+    background-color: #d9d9ff !important;
 }
 
 .link-style {
