@@ -65,10 +65,29 @@ const MilLogin = () => {
    }
 
    function changeLgnBtn() {
-      idText.includes('@') && pwText.length >= 6 ? setLgnBtn(true) : setLgnBtn(false);
+      idText.includes('@') && pwText.length >= 6
+         ? setLgnBtn(true)
+         : setLgnBtn(false);
    }
 
-   const checkLogin = (e: any) => {
+   axios.defaults.baseURL = "http://localhost:3000";
+   axios.defaults.withCredentials = true;
+   const LoginToken = (email: string | number, password: string | number) => {
+      const data = {
+         email,
+         password,
+      };
+      axios.post('/mil-login', data).then(response => {
+         const { accessToken } = response.data;
+
+         // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+		axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+      }).catch(error => {
+         
+      })
+   }
+
+   const onLogin = (e: any) => {
       e.preventDefault();
 
       axios
@@ -87,8 +106,6 @@ const MilLogin = () => {
             console.log('ajax error');
          });
    };
-
-   
 
    return (
       <>
@@ -162,8 +179,10 @@ const MilLogin = () => {
                               <Link
                                  to="/"
                                  id="login-btn"
-                                 className={lgnBtn == false ? "btn_disabled" : ""}
-                                 onClick={checkLogin}
+                                 className={
+                                    lgnBtn == false ? 'btn_disabled' : ''
+                                 }
+                                 onClick={onLogin}
                               >
                                  <S.LoginBtnSpan>로그인</S.LoginBtnSpan>
                               </Link>
@@ -202,7 +221,9 @@ const MilLogin = () => {
          <S.PopupContainer display={popupShow}>
             <S.PopupAlert>
                <div>
-                  <S.PopupText>아이디 또는 비밀번호가 일치하지 않습니다.</S.PopupText>
+                  <S.PopupText>
+                     아이디 또는 비밀번호가 일치하지 않습니다.
+                  </S.PopupText>
                </div>
                <S.PopupDiv>
                   <S.PopupBtn onClick={clickPopupBtn}>확인</S.PopupBtn>
