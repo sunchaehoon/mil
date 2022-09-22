@@ -70,28 +70,32 @@ const MilLogin = () => {
          : setLgnBtn(false);
    }
 
-   axios.defaults.baseURL = "http://localhost:3000";
-   axios.defaults.withCredentials = true;
-   const LoginToken = (email: string | number, password: string | number) => {
-      const data = {
-         email,
-         password,
-      };
-      axios.post('/mil-login', data).then(response => {
-         const { accessToken } = response.data;
+   // axios.defaults.baseURL = "http://localhost:3000";
+   // axios.defaults.withCredentials = true;
+   // const LoginToken = (email: string | number, password: string | number) => {
+   //    const data = {
+   //       email,
+   //       password,
+   //    };
+   //    axios.post('/mil-login', data).then(response => {
+   //       const { accessToken } = response.data;
 
-         // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
-		axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-      }).catch(error => {
-         
-      })
-   }
+   //       // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+	// 	axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+   //    }).catch(error => {
+
+   //    })
+   // }
 
    const onLogin = (e: any) => {
       e.preventDefault();
 
       axios
-         .get('http://localhost:4000/users')
+         .get('http://localhost:4000/users'
+         ,{
+            
+         }
+         )
          .then((user) => {
             user.data.map(function (a: number | string, i: number) {
                if (user.data[i].id == idText && user.data[i].pw == pwText) {
