@@ -9,8 +9,10 @@ import axios from 'axios';
 const MilLogin = () => {
    const inputId: any = document.getElementById('id-input');
    const inputPw: any = document.getElementById('pw-input');
+
    const [inputIdShow, setInputIdShow] = useState<string>('none');
    const [inputPwShow, setInputPwShow] = useState<string>('none');
+
    const [idText, setIdText] = useState<string>('');
    const [pwText, setPwText] = useState<string>('');
    const [pwToggle, setPwToggle] = useState<boolean>(false);
@@ -18,6 +20,7 @@ const MilLogin = () => {
    const [popupShow, setPopupShow] = useState<string>('none');
    const navigate = useNavigate();
    const [lgnBtn, setLgnBtn] = useState<boolean>(false);
+   const [isLogin, setIsLogin] = useState<boolean>(false);
 
    function delIdInput() {
       setIdText('');
@@ -35,7 +38,7 @@ const MilLogin = () => {
    }
 
    function clickIdSaveToggle() {
-      setIdSaveToggle((prev) => !prev);
+      setIdSaveToggle((prev) => !prev);   
    }
 
    function clickPopupBtn() {
@@ -91,14 +94,16 @@ const MilLogin = () => {
       e.preventDefault();
 
       axios
-         .get('http://localhost:4000/users'
-         ,{
-            
-         }
-         )
+         .get('http://localhost:4000/users')
          .then((user) => {
             user.data.map(function (a: number | string, i: number) {
                if (user.data[i].id == idText && user.data[i].pw == pwText) {
+                  if(idSaveToggle == true) {
+                     localStorage.setItem("nickname", user.data[i].nickname);
+                     localStorage.setItem("id", user.data[i].id);
+                     localStorage.setItem("pw", user.data[i].pw);
+                  }
+                  setIsLogin(true);
                   alert(user.data[i].nickname + '님 로그인');
                   navigate(-1);
                } else {
