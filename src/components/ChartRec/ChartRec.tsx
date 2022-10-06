@@ -81,8 +81,6 @@ const ChartRec = () => {
                         underBarClick(2);
                      }}
                   />
-                  {/* <S.SwiperBullet />
-                  <S.SwiperBullet /> */}
                </S.PagingDot>
             </S.Recommendsection>
          </S.SectionInner>

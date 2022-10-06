@@ -103,3 +103,18 @@ export const HeaderNav2 = styled.div`
     margin: 45px 81px 0 0;
 `;
 
+export const UserPrf = styled.div`
+    position: relative;
+`;
+
+export const PrfBtn = styled.button`
+    position: relative;
+    top: 0px;
+    color: #000;
+`;
+
+export const Lgout = styled.button`
+    position: relative;
+    top: 0px;
+`;
+

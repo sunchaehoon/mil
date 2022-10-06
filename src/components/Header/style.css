@@ -58,7 +58,6 @@ vertical-align: baseline; outline: 0; padding: 0; margin: 0; border: 0;
 
 .nav2-ul {
     list-style: none;
-    margin-right: 5px;
 }
 
 .nav2-ul li:first-child {
@@ -70,7 +69,7 @@ vertical-align: baseline; outline: 0; padding: 0; margin: 0; border: 0;
     margin-left: 25px;
     font-size: 13px;
     vertical-align: top;
-    white-space: nowrap;    /* ? */
+    white-space: nowrap;
 }
 
 

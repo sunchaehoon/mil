@@ -22,6 +22,9 @@ const MilLogin = () => {
    const [lgnBtn, setLgnBtn] = useState<boolean>(false);
    const [isLogin, setIsLogin] = useState<boolean>(false);
 
+   const [userNickname, setUserNickname] = useState<string>('');
+   const [userId, setUserId] = useState<string>('');
+
    function delIdInput() {
       setIdText('');
       setInputIdShow('none');
@@ -102,6 +105,9 @@ const MilLogin = () => {
                      localStorage.setItem("nickname", user.data[i].nickname);
                      localStorage.setItem("id", user.data[i].id);
                      localStorage.setItem("pw", user.data[i].pw);
+                  } else {
+                     setUserNickname(user.data[i].nickname);
+                     setUserId(user.data[i].id);
                   }
                   setIsLogin(true);
                   alert(user.data[i].nickname + '님 로그인');
@@ -119,7 +125,7 @@ const MilLogin = () => {
    return (
       <>
          <S.App>
-            <Header />
+            <Header isLogin={isLogin} userNickname={userNickname} userId={userId} />
 
             <S.Wrap>
                <S.MainSection>
