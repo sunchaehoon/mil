@@ -101,8 +101,9 @@ const MilLogin = () => {
          .then((user) => {
             user.data.map(function (a: number | string, i: number) {
                if (user.data[i].id == idText && user.data[i].pw == pwText) {
-                  if(idSaveToggle == true) {
+                  if(idSaveToggle == false) {
                      localStorage.setItem("nickname", user.data[i].nickname);
+                     console.log(user.data[i].nickname);
                      localStorage.setItem("id", user.data[i].id);
                      localStorage.setItem("pw", user.data[i].pw);
                   } else {

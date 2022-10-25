@@ -56,7 +56,6 @@ const Header = ({ isLogin, userNickname, userId }: LoginProps) => {
                             <S.UserPrf>
                                 <S.PrfBtn>
                                     {localStorage.getItem("nickname")}
-                                    <S.Lgout onClick={Logout}>로그아웃</S.Lgout>
                                 </S.PrfBtn>
                             </S.UserPrf>
                         </li>
@@ -68,6 +67,7 @@ const Header = ({ isLogin, userNickname, userId }: LoginProps) => {
                             <S.UserPrf>
                                 <S.PrfBtn>
                                     {userNickname}
+                                    <S.PrfImg></S.PrfImg>
                                 </S.PrfBtn>
                             </S.UserPrf>
                         </li>

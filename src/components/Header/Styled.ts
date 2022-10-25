@@ -113,8 +113,9 @@ export const PrfBtn = styled.button`
     color: #000;
 `;
 
-export const Lgout = styled.button`
-    position: relative;
-    top: 0px;
+export const PrfImg = styled.span`
+    background-image: ("https://cdn.music-flo.com/poc/p/image/character/default/default_1.png?/dims/resize/400x400/quality/90");
+    width: 40px;
+    height: 40px;
 `;
 
